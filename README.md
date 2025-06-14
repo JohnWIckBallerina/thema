@@ -21,9 +21,9 @@
 ## Why HyperSwitch Plugins?
 HyperSwitch Plugins let you **build once, use anywhere** across backtests, paper trading, and live markets.
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/juspay/hyperswitch/main/docs/gifs/quickstart.gif" alt="Quickstart demo" />
-</p>
+
+![imagde](https://private-user-images.githubusercontent.com/35243/438235619-13fc5ef4-ce0f-4073-a163-9dbc3eb4c8e5.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDk5MzE2NjcsIm5iZiI6MTc0OTkzMTM2NywicGF0aCI6Ii8zNTI0My80MzgyMzU2MTktMTNmYzVlZjQtY2UwZi00MDczLWExNjMtOWRiYzNlYjRjOGU1LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA2MTQlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNjE0VDIwMDI0N1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTAwMmZlOGI0MzU2ODM2YjQ2YzA0NTkzYTc2YzhhMzY2ZWNkYmY5MjM3NWViYjQ2MTljYTUxNzMyZDcwNTZlNTcmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.3eVg2xATusT5XfRT6t5CI2u41xWZ_scRlcB7pMK3RnI)
+
 
 They are:
 - 🔌 Modular & reusable components
