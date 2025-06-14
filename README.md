@@ -89,21 +89,6 @@ Make sure you have the following tools installed on your system:
 
 > You can also use Docker to run the project in an isolated environment.
 
----
-
-### 2. 🌐 Clone the Repository
-
-Clone the project repository using Git:
-
-```bash
-git clone https://github.com/your-username/Maybe-finance-plugins-RSI-Based-Crypto-Trading.git 
-cd Maybe-finance-plugins-RSI-Based-Crypto-Trading
-```
-
-Replace `your-username` with your GitHub username.
-
----
-
 ### 3. 📦 Install Dependencies
 
 Install the required npm packages:
