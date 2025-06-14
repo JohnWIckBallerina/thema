@@ -10,8 +10,13 @@
 </div>
 <br />
 
-
-
+```mermaid
+erDiagram
+    RSI_PLUGIN {
+        string id = "rsi-trading-plugin"
+        string name = "RSI Based Trader"
+        string type = "technical_analysis"
+    }
 
     RSI_PLUGIN ||--o{ RSI_STRATEGY : implements
     RSI_STRATEGY ||--o{ RSI_INDICATOR : uses
@@ -20,6 +25,7 @@
     CRYPTO_MARKET }|--o{ BINANCE : connects
     RSI_PLUGIN ||--o{ PLUGIN_CONFIG : requires
     RSI_PLUGIN ||--o{ PLUGIN_LOGGER : logs
+```
 
 [![Discord Shield](https://img.shields.io/discord/831165782750789672)](https://discord.com/invite/xPHTuHCmuV)
 [![Open in Dev Containers](https://img.shields.io/static/v1?label=Dev%20Containers&message=Open&color=blue&logo=visualstudiocode)](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/OpenBB-finance/OpenBB)
