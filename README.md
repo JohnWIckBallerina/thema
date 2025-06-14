@@ -90,11 +90,6 @@ if __name__ == "__main__":
 
 ```
 
-![image](https://github.com/user-attachments/assets/fb77fc15-02d1-4669-8e74-c973619238c1)
-![image](https://github.com/user-attachments/assets/214fb653-bae0-4c93-8cb6-4ac9ce74a647)
-
-
-
 ## 🛠️ Installation
 
 Follow the steps below to install and run this project on your local machine.
