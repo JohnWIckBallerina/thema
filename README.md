@@ -15,11 +15,11 @@
 [![PyPI](https://img.shields.io/pypi/v/openbb?color=blue&label=PyPI%20Package)](https://pypi.org/project/openbb/)
 
 
-## Why Firefly Plugins?
-Firefly Plugins let you **build once, use anywhere** across backtests, paper trading, and live markets.
+## Why HyperSwitch Plugins?
+HyperSwitch Plugins let you **build once, use anywhere** across backtests, paper trading, and live markets.
 
 <p align="center">
-	<img src="https://raw.githubusercontent.com/firefly-iii/firefly-iii/develop/.github/assets/img/imac-complete.png" alt="Firefly III on iMac" />
+  <img src="https://raw.githubusercontent.com/juspay/hyperswitch/main/docs/gifs/quickstart.gif" alt="Quickstart demo" />
 </p>
 
 They are:
@@ -37,20 +37,20 @@ Create, share, or combine plugins for indicators, strategies, risk controls, and
 * Import over an API for easy automation
 * Use rules and data mapping for transaction clarity
 
-"Firefly III" is a (self-hosted) manager for your personal finances. It can help you keep track of your expenses and income, so you can spend less and save more. Firefly III supports the use of budgets, categories and tags. Using a bunch of external tools, you can import data. It also has many neat financial reports available.
+"HyperSwitch III" is a (self-hosted) manager for your personal finances. It can help you keep track of your expenses and income, so you can spend less and save more. HyperSwitch III supports the use of budgets, categories and tags. Using a bunch of external tools, you can import data. It also has many neat financial reports available.
 
-Firefly III should give you **insight** into and **control** over your finances. Money should be useful, not scary. You should be able to *see* where it is going, to *feel* your expenses and to... wow, I'm going overboard with this aren't I?
+HyperSwitch III should give you **insight** into and **control** over your finances. Money should be useful, not scary. You should be able to *see* where it is going, to *feel* your expenses and to... wow, I'm going overboard with this aren't I?
 
 But you get the idea: this is your money. These are your expenses. Stop them from controlling you. I built this tool because I started to dislike money. Having money, not having money, paying bills with money, you get the idea. But no more. I want to feel "safe", whatever my balance is. And I hope this tool can help you. I know it helps me.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/firefly-iii/firefly-iii/develop/.github/assets/img/ipad-complete.png" alt="Firefly III on iPad" width="600">
+  <img src="https://raw.githubusercontent.com/HyperSwitch-iii/HyperSwitch-iii/develop/.github/assets/img/ipad-complete.png" alt="HyperSwitch III on iPad" width="600">
 </p>
 
 ### Trade Stocks, Crypto, Futures, and Forex
 
 ```python
-from Firefly import Alpaca, CoinbasePro
+from HyperSwitch import Alpaca, CoinbasePro
 
 stocks = Alpaca()
 crypto = CoinbasePro()
@@ -66,12 +66,12 @@ futures.interface.get_hedge_mode()
 ### Backtest your trades, events, websockets, and custom data
 
 ```python
-import Firefly
+import HyperSwitch
 """
 This example shows how backtest over tweets
 """
 
-class TwitterBot(Firefly.Model):
+class TwitterBot(HyperSwitch.Model):
     def main(self, args):
         while self.has_data:
             self.backtester.value_account()
@@ -85,11 +85,11 @@ class TwitterBot(Firefly.Model):
 
 
 if __name__ == "__main__":
-    exchange = Firefly.Alpaca()
+    exchange = HyperSwitch.Alpaca()
     model = TwitterBot(exchange)
 
     # Add the tweets json here
-    model.backtester.add_custom_events(Firefly.data.JsonEventReader('./tweets.json'))
+    model.backtester.add_custom_events(HyperSwitch.data.JsonEventReader('./tweets.json'))
     # Now add some underlying prices at 1 month
     model.backtester.add_prices('TSLA', '1h', start_date='3/20/22', stop_date='4/15/22')
 
@@ -101,7 +101,7 @@ if __name__ == "__main__":
 #### Accurate Backtest Holdings
 
 <div align="center">
-    <a><img src="https://firebasestorage.googleapis.com/v0/b/Firefly-6ada5.appspot.com/o/github%2FScreen%20Shot%202022-04-17%20at%202.37.58%20PM.png?alt=media&token=d5738617-e197-4da2-850d-8fbbfda05275" style="border-radius:10px"></a>
+    <a><img src="https://firebasestorage.googleapis.com/v0/b/HyperSwitch-6ada5.appspot.com/o/github%2FScreen%20Shot%202022-04-17%20at%202.37.58%20PM.png?alt=media&token=d5738617-e197-4da2-850d-8fbbfda05275" style="border-radius:10px"></a>
 </div>
 
 
@@ -127,8 +127,8 @@ Make sure you have the following tools installed on your system:
 Clone the project repository using Git:
 
 ```bash
-git clone https://github.com/your-username/Firefly-finance-plugins-RSI-Based-Crypto-Trading.git 
-cd Firefly-finance-plugins-RSI-Based-Crypto-Trading
+git clone https://github.com/your-username/HyperSwitch-finance-plugins-RSI-Based-Crypto-Trading.git 
+cd HyperSwitch-finance-plugins-RSI-Based-Crypto-Trading
 ```
 
 Replace `your-username` with your GitHub username.
@@ -205,8 +205,8 @@ node index.js --plugin rsi --config config/rsi-config.yaml
 Build and run the plugin using Docker:
 
 ```bash
-docker build -t Firefly-rsi-plugin .
-docker run -it --env-file .env Firefly-rsi-plugin
+docker build -t HyperSwitch-rsi-plugin .
+docker run -it --env-file .env HyperSwitch-rsi-plugin
 ```
 
 ```mermaid
