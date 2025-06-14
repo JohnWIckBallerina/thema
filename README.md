@@ -115,11 +115,9 @@ if __name__ == "__main__":
 
 ```
 
-#### Accurate Backtest Holdings
+![image](https://github.com/user-attachments/assets/fb77fc15-02d1-4669-8e74-c973619238c1)
+![image](https://github.com/user-attachments/assets/214fb653-bae0-4c93-8cb6-4ac9ce74a647)
 
-<div align="center">
-    <a><img src="https://firebasestorage.googleapis.com/v0/b/HyperSwitch-6ada5.appspot.com/o/github%2FScreen%20Shot%202022-04-17%20at%202.37.58%20PM.png?alt=media&token=d5738617-e197-4da2-850d-8fbbfda05275" style="border-radius:10px"></a>
-</div>
 
 
 ## 🛠️ Installation
