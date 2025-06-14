@@ -42,22 +42,6 @@ Each module is independent and purpose-built to optimize different aspects of pa
 ### Trade Stocks, Crypto, Futures, and Forex
 
 ```python
-from Maybe import Alpaca, CoinbasePro
-
-stocks = Alpaca()
-crypto = CoinbasePro()
-futures = BinanceFutures()
-
-# Easily perform the same actions across exchanges & asset types
-stocks.interface.market_order('AAPL', 'buy', 1)
-crypto.interface.market_order('BTC-USD', 'buy', 1)
-# Full futures feature set
-futures.interface.get_hedge_mode()
-```
-
-### Backtest your trades, events, websockets, and custom data
-
-```python
 import Maybe
 """
 This example shows how backtest over tweets
