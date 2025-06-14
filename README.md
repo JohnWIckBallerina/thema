@@ -1,7 +1,7 @@
 <br />
 
 <p align="center">
-  <img src="https://github.com/juspay/hyperswitch/raw/main/docs/imgs/hyperswitch-logo-dark.svg#gh-dark-mode-only" alt="Hyperswitch-Logo" width="40%" />
+  <img src="https://github.com/juspay/Maybe/raw/main/docs/imgs/Maybe-logo-dark.svg#gh-dark-mode-only" alt="Maybe-Logo" width="40%" />
 </p>
 
 ![SCR-20250120-ooto](https://github.com/user-attachments/assets/8c0bfb09-bb8e-4b56-bbb6-8f0df29263e4)
@@ -18,8 +18,8 @@
 [![PyPI](https://img.shields.io/pypi/v/openbb?color=blue&label=PyPI%20Package)](https://pypi.org/project/openbb/)
 
 
-## Why HyperSwitch Plugins?
-HyperSwitch Plugins let you **build once, use anywhere** across backtests, paper trading, and live markets.
+## Why Maybe Plugins?
+Maybe Plugins let you **build once, use anywhere** across backtests, paper trading, and live markets.
 
 
 ![imagde](https://private-user-images.githubusercontent.com/35243/438235619-13fc5ef4-ce0f-4073-a163-9dbc3eb4c8e5.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDk5MzE2NjcsIm5iZiI6MTc0OTkzMTM2NywicGF0aCI6Ii8zNTI0My80MzgyMzU2MTktMTNmYzVlZjQtY2UwZi00MDczLWExNjMtOWRiYzNlYjRjOGU1LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA2MTQlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNjE0VDIwMDI0N1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTAwMmZlOGI0MzU2ODM2YjQ2YzA0NTkzYTc2YzhhMzY2ZWNkYmY5MjM3NWViYjQ2MTljYTUxNzMyZDcwNTZlNTcmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.3eVg2xATusT5XfRT6t5CI2u41xWZ_scRlcB7pMK3RnI)
@@ -33,9 +33,9 @@ They are:
 
 Create, share, or combine plugins for indicators, strategies, risk controls, and more — all while keeping your code clean and scalable.
 
-<summary><h2> What Can I Do with Hyperswitch?</h2></summary>
+<summary><h2> What Can I Do with Maybe?</h2></summary>
 
-Hyperswitch offers a modular, open-source payments infrastructure designed for flexibility and control. Apart from our Payment Suite offering, this solution allows businesses to pick and integrate only the modules they need on top of their existing payment stack — without unnecessary complexity or vendor lock-in.
+Maybe offers a modular, open-source payments infrastructure designed for flexibility and control. Apart from our Payment Suite offering, this solution allows businesses to pick and integrate only the modules they need on top of their existing payment stack — without unnecessary complexity or vendor lock-in.
 
 Each module is independent and purpose-built to optimize different aspects of payment processing.
 
@@ -44,33 +44,33 @@ Each module is independent and purpose-built to optimize different aspects of pa
 
 - **Cost Observability**  
   Advanced observability tools to audit, monitor, and optimize your payment costs. Detect hidden fees, downgrades, and penalties with self-serve dashboards and actionable insights.  
-  _[Read more](https://docs.hyperswitch.io/about-hyperswitch/payments-modules/ai-powered-cost-observability)_
+  _[Read more](https://docs.Maybe.io/about-Maybe/payments-modules/ai-powered-cost-observability)_
 
 - **Revenue Recovery**  
   Combat passive churn with intelligent retry strategies tuned by card bin, region, method, and more. Offers fine-grained control over retry algorithms, penalty budgets, and recovery transparency.  
-  _[Read more](https://docs.hyperswitch.io/about-hyperswitch/payments-modules/revenue-recovery)_
+  _[Read more](https://docs.Maybe.io/about-Maybe/payments-modules/revenue-recovery)_
 
 - **Vault**  
   A PCI-compliant vault service to store cards, tokens, wallets, and bank credentials. Provides a unified, secure, and reusable store of customer-linked payment methods.  
-  _[Read more](https://docs.hyperswitch.io/about-hyperswitch/payments-modules/vault)_
+  _[Read more](https://docs.Maybe.io/about-Maybe/payments-modules/vault)_
 
 - **Intelligent Routing**  
   Route each transaction to the PSP with the highest predicted auth rate. Reduce retries, avoid downtime, and minimize latency while maximizing first attempt success.  
-  _[Read more](https://docs.hyperswitch.io/about-hyperswitch/payments-modules/intelligent-routing)_
+  _[Read more](https://docs.Maybe.io/about-Maybe/payments-modules/intelligent-routing)_
 
 - **Reconciliation**  
   Automate 2-way and 3-way reconciliation with backdated support, staggered scheduling, and customizable outputs. Reduces manual ops effort and increases audit confidence.  
-  _[Read more](https://docs.hyperswitch.io/about-hyperswitch/payments-modules/reconciliation)_
+  _[Read more](https://docs.Maybe.io/about-Maybe/payments-modules/reconciliation)_
 
 - **Alternate Payment Methods**  
   Drop-in widgets for PayPal, Apple Pay, Google Pay, Samsung Pay, Pay by Bank, and BNPL providers like Klarna. Maximizes conversions with seamless one-click checkout.  
-  _[Read more](https://docs.hyperswitch.io/about-hyperswitch/payments-modules/enable-alternate-payment-method-widgets)_
+  _[Read more](https://docs.Maybe.io/about-Maybe/payments-modules/enable-alternate-payment-method-widgets)_
 
 </details>
 ### Trade Stocks, Crypto, Futures, and Forex
 
 ```python
-from HyperSwitch import Alpaca, CoinbasePro
+from Maybe import Alpaca, CoinbasePro
 
 stocks = Alpaca()
 crypto = CoinbasePro()
@@ -86,12 +86,12 @@ futures.interface.get_hedge_mode()
 ### Backtest your trades, events, websockets, and custom data
 
 ```python
-import HyperSwitch
+import Maybe
 """
 This example shows how backtest over tweets
 """
 
-class TwitterBot(HyperSwitch.Model):
+class TwitterBot(Maybe.Model):
     def main(self, args):
         while self.has_data:
             self.backtester.value_account()
@@ -105,11 +105,11 @@ class TwitterBot(HyperSwitch.Model):
 
 
 if __name__ == "__main__":
-    exchange = HyperSwitch.Alpaca()
+    exchange = Maybe.Alpaca()
     model = TwitterBot(exchange)
 
     # Add the tweets json here
-    model.backtester.add_custom_events(HyperSwitch.data.JsonEventReader('./tweets.json'))
+    model.backtester.add_custom_events(Maybe.data.JsonEventReader('./tweets.json'))
     # Now add some underlying prices at 1 month
     model.backtester.add_prices('TSLA', '1h', start_date='3/20/22', stop_date='4/15/22')
 
@@ -145,8 +145,8 @@ Make sure you have the following tools installed on your system:
 Clone the project repository using Git:
 
 ```bash
-git clone https://github.com/your-username/HyperSwitch-finance-plugins-RSI-Based-Crypto-Trading.git 
-cd HyperSwitch-finance-plugins-RSI-Based-Crypto-Trading
+git clone https://github.com/your-username/Maybe-finance-plugins-RSI-Based-Crypto-Trading.git 
+cd Maybe-finance-plugins-RSI-Based-Crypto-Trading
 ```
 
 Replace `your-username` with your GitHub username.
@@ -223,8 +223,8 @@ node index.js --plugin rsi --config config/rsi-config.yaml
 Build and run the plugin using Docker:
 
 ```bash
-docker build -t HyperSwitch-rsi-plugin .
-docker run -it --env-file .env HyperSwitch-rsi-plugin
+docker build -t Maybe-rsi-plugin .
+docker run -it --env-file .env Maybe-rsi-plugin
 ```
 
 ```mermaid
