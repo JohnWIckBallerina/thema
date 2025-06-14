@@ -19,8 +19,11 @@
 ## Why Maybe Plugins?
 Maybe Plugins let you **build once, use anywhere** across backtests, paper trading, and live markets.
 
-
-![imagde](https://private-user-images.githubusercontent.com/35243/438235619-13fc5ef4-ce0f-4073-a163-9dbc3eb4c8e5.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDk5MzE2NjcsIm5iZiI6MTc0OTkzMTM2NywicGF0aCI6Ii8zNTI0My80MzgyMzU2MTktMTNmYzVlZjQtY2UwZi00MDczLWExNjMtOWRiYzNlYjRjOGU1LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA2MTQlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNjE0VDIwMDI0N1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTAwMmZlOGI0MzU2ODM2YjQ2YzA0NTkzYTc2YzhhMzY2ZWNkYmY5MjM3NWViYjQ2MTljYTUxNzMyZDcwNTZlNTcmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.3eVg2xATusT5XfRT6t5CI2u41xWZ_scRlcB7pMK3RnI)
+<a>
+  <div align="center">
+  <img src="https://openbb-cms.directus.app/assets/f69b6aaf-0821-4bc8-a43c-715e03a924ef.png" alt="Logo" width="1000">
+  </div>
+</a>
 
 
 They are:
@@ -36,14 +39,9 @@ Create, share, or combine plugins for indicators, strategies, risk controls, and
 
 While the OpenBB Platform is all about an integration to dozens of different data vendors, the interface is either Python or a CLI.
 
-If you want an enterprise UI to visualize this datasets and use AI agents on top, you can find OpenBB Workspace at <https://pro.openbb.co>.
+If you want an enterprise UI to visualize this datasets and use AI agents on top, you can find OpenBB Workspace at.
 
-<a>
-  <div align="center">
-  <img src="https://openbb-cms.directus.app/assets/f69b6aaf-0821-4bc8-a43c-715e03a924ef.png" alt="Logo" width="1000">
-  </div>
-</a>
-
+![CleanShot 2025-05-17 at 09 51 56@2x](https://github.com/user-attachments/assets/75cffb4a-5e95-470a-b9d0-6ffd4067e069)
 
 ```python
 import Maybe
@@ -82,81 +80,21 @@ if __name__ == "__main__":
 
 Follow the steps below to install and run this project on your local machine.
 
-### 1. 📦 Prerequisites
+The OpenBB Platform can be installed as a [PyPI package](https://pypi.org/project/openbb/) by running `pip install openbb`
 
-Make sure you have the following tools installed on your system:
+or by cloning the repository directly with `git clone https://github.com/OpenBB-finance/OpenBB.git`.
 
-- [Node.js](https://nodejs.org/)  (v14.x or newer)
-- [npm](https://www.npmjs.com/)  (comes with Node.js)
-- [Git](https://git-scm.com/) 
-- Python 3.x (optional, if any indicators or tools require it)
+Please find more about the installation process, in the [OpenBB Documentation](https://docs.openbb.co/platform/installation).
 
-> You can also use Docker to run the project in an isolated environment.
+### OpenBB Platform CLI installation
 
-### 3. 📦 Install Dependencies
+The OpenBB Platform CLI is a command-line interface that allows you to access the OpenBB Platform directly from your command line.
 
-Install the required npm packages:
+It can be installed by running `pip install openbb-cli`
 
-```bash
-npm install
-```
+or by cloning the repository directly with  `git clone https://github.com/OpenBB-finance/OpenBB.git`.
 
-If the plugin uses Python-based tools or indicators, install the Python dependencies as well:
-
-```bash
-pip install -r requirements.txt
-```
-
----
-
-### 4. 🔐 Set Up Exchange API Keys
-
-To allow the plugin to interact with cryptocurrency exchanges, set up your API credentials.
-
-Create a `.env` file in the root directory and add your exchange keys:
-
-```env
-EXCHANGE_API_KEY=your_api_key_here
-EXCHANGE_SECRET_KEY=your_secret_key_here
-```
-
-> Make sure not to commit this file to version control. It should remain private.
-
----
-
-### 5. ⚙️ Configure the Plugin
-
-Each plugin comes with a configuration file. For example:
-
-```yaml
-# config/rsi-config.yaml
-strategy:
-  rsi_period: 14
-  overbought_threshold: 70
-  oversold_threshold: 30
-  symbol: BTC/USDT
-  interval: "1h"
-```
-
-You can modify these values based on your trading preferences.
-
----
-
-### 6. ▶️ Run the Plugin
-
-Once everything is set up, start the plugin:
-
-```bash
-npm start -- --plugin rsi --config config/rsi-config.yaml
-```
-
-Or, if you're using a custom script:
-
-```bash
-node index.js --plugin rsi --config config/rsi-config.yaml
-```
-
----
+Please find more about the installation process in the
 
 ### 7. 🐳 Optional: Run with Docker
 
