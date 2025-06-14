@@ -8,12 +8,12 @@
     <img src ="https://img.shields.io/badge/version-4.0.0-blueviolet.svg"/>
     <img src ="https://img.shields.io/badge/platform-windows|linux|macos-yellow.svg"/>
     <img src ="https://img.shields.io/badge/python-3.10|3.11|3.12|3.13-blue.svg" />
-    <img src ="https://img.shields.io/github/actions/workflow/status/vnpy/vnpy/pythonapp.yml?branch=master"/>
-    <img src ="https://img.shields.io/github/license/vnpy/vnpy.svg?color=orange"/>
+    <img src ="https://img.shields.io/github/actions/workflow/status/Financial Chat/Financial Chat/pythonapp.yml?branch=master"/>
+    <img src ="https://img.shields.io/github/license/Financial Chat/Financial Chat.svg?color=orange"/>
 </p>
 
 
-## Why vnpy Plugins?
+## Why Financial Chat?
 VeighNa is a Python-based open source quantitative trading system development framework that has grown step by step into a fully-featured quantitative trading platform with continuous contributions from the open source community. It currently has many users from domestic and international financial institutions, including hedge funds, investment banks, futures brokers, university research institutions, proprietary trading companies, etc. **The VeighNa Elite Quantitative Terminal for professional traders has been officially released, providing comprehensive support for professional traders' needs in areas such as massive strategy concurrency, intelligent position rolling, algorithmic order execution, multi-account trading support, and more. For more detailed information, please scan the QR code below and follow the account, then click on the menu bar's [Community Exchange -> Elite Member Services]**
 
 They are:
@@ -22,7 +22,7 @@ They are:
 - 🧩 Easy to plug into any strategy or workflow
 - 🌐 Exchange-agnostic with unified interfaces
 
-Create, share, or combine plugins for indicators, strategies, risk controls, and more — all while keeping your code clean and scalable.
+Create, share, or combine for indicators, strategies, risk controls, and more — all while keeping your code clean and scalable.
 
 ![image](https://github.com/user-attachments/assets/3c9e3e92-9255-414b-ac62-d0e3cdabff40)
 
@@ -30,11 +30,11 @@ Create, share, or combine plugins for indicators, strategies, risk controls, and
 
 On the tenth anniversary of VeighNa's release, version 4.0 officially introduces the module targeting AI quantitative strategies, providing professional quantitative traders with **an all-in-one multi-factor machine learning (ML) strategy development, research, and live trading solution**:
 
-## vnpy Workspace
+## Financial Chat Workspace
 
-While the vnpy Platform is all about an integration to dozens of different data vendors, the interface is either Python or a CLI.
+While the Financial Chat Platform is all about an integration to dozens of different data vendors, the interface is either Python or a CLI.
 
-If you want an enterprise UI to visualize this datasets and use AI agents on top, you can find vnpy Workspace at.
+If you want an enterprise UI to visualize this datasets and use AI agents on top, you can find Financial Chat Workspace at.
 
 * :bar_chart: **dataset**: Factor Feature Engineering
 
@@ -146,6 +146,6 @@ erDiagram
 
  wouldn't be  without you. If we are going to disrupt financial industry, every contribution counts. Thank you for being part of this journey.
 
-<a href="https://github.com/vnpy-finance/vnpy/graphs/contributors">
-   <img src="https://contributors-img.web.app/image?repo=vnpy-finance/vnpy" width="800"/>
+<a href="https://github.com/Financial Chat-finance/Financial Chat/graphs/contributors">
+   <img src="https://contributors-img.web.app/image?repo=Financial Chat-finance/Financial Chat" width="800"/>
 </a>
