@@ -1,21 +1,21 @@
-[![Twitter](https://img.shields.io/twitter/url/https/twitter.com/Stock_finance.svg?style=social&label=Follow%20%40Stock_finance)](https://x.com/Stock_finance)
+[![Twitter](https://img.shields.io/twitter/url/https/twitter.com/StockSharp_finance.svg?style=social&label=Follow%20%40StockSharp_finance)](https://x.com/StockSharp_finance)
 [![Discord Shield](https://img.shields.io/discord/831165782750789672)](https://discord.com/invite/xPHTuHCmuV)
-[![Open in Dev Containers](https://img.shields.io/static/v1?label=Dev%20Containers&message=Open&color=blue&logo=visualstudiocode)](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/Stock-finance/Stock)
-<a href="https://codespaces.new/Stock-finance/Stock">
+[![Open in Dev Containers](https://img.shields.io/static/v1?label=Dev%20Containers&message=Open&color=blue&logo=visualstudiocode)](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/StockSharp-finance/StockSharp)
+<a href="https://codespaces.new/StockSharp-finance/StockSharp">
   <img src="https://github.com/codespaces/badge.svg" height="20" />
 </a>
-<a target="_blank" href="https://colab.research.google.com/github/Stock-finance/Stock/blob/develop/examples/googleColab.ipynb">
+<a target="_blank" href="https://colab.research.google.com/github/StockSharp-finance/StockSharp/blob/develop/examples/googleColab.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a>
 
-![image](https://gitee.com/pythonstock/stock/raw/master/frontend/public/stock-001.png)
+[![image](https://gitee.com/pythonStockSharp/StockSharp/raw/master/frontend/public/StockSharp-001.png)]
 
-## Why Stock Plugins?
+## Why StockSharp Plugins?
 Most scripts inside this repository are technical indicator automated trading. These scripts include various types of momentum trading, opening range breakout, reversal of support & resistance and statistical arbitrage strategies. Yet, quantitative trading is not only about technical analysis. It can refer to computational finance to exploit derivative price mismatch, pattern recognition on alternative datasets to generate alphas or low latency order execution in the market microstructure. Hence, there are a few ongoing projects inside this repository. These projects are mostly quantamental analysis on some strange ideas I come up with to beat the market (or so I thought). There is no HFT strategy simply because ultra high frequency data are very expensive to acquire (even consider platforms like Quantopian or Quandl). Additionally, please note that, all scripts are historical data backtesting/forward testing (basically via Python, not C++, maybe Julia in the near future). The assumption is that all trades are frictionless. No slippage, no surcharge, no illiquidity. Last but not least, all scripts contain a global function named main so that you can embed the scripts directly into you trading system (although too lazy to write docstring).
 
 <a>
   <div align="center">
-  <img src="https://gitee.com/pythonstock/stock/raw/master/frontend/public/stock-003.png" alt="Logo" width="1000">
+  <img src="https://gitee.com/pythonStockSharp/StockSharp/raw/master/frontend/public/StockSharp-003.png" alt="Logo" width="1000">
   </div>
 </a>
 
@@ -49,13 +49,13 @@ Create, share, or combine plugins for indicators, strategies, risk controls, and
 增加 install docker 说明。
 添加 vue api。
 
-## Stock Workspace
+## StockSharp Workspace
 
-While the Stock Platform is all about an integration to dozens of different data vendors, the interface is either Python or a CLI.
+While the StockSharp Platform is all about an integration to dozens of different data vendors, the interface is either Python or a CLI.
 
-If you want an enterprise UI to visualize this datasets and use AI agents on top, you can find Stock Workspace at.
+If you want an enterprise UI to visualize this datasets and use AI agents on top, you can find StockSharp Workspace at.
 
-![image](https://gitee.com/pythonstock/stock/raw/master/frontend/public/stock-002.png)
+![image](https://gitee.com/pythonStockSharp/StockSharp/raw/master/frontend/public/StockSharp-002.png)
 
 ### 架构设计
 全系使用python实现。因为都是python的类库，互相之间调用方便。
@@ -73,12 +73,12 @@ If you want an enterprise UI to visualize this datasets and use AI agents on top
 
 
 ```python
-import Stock
+import StockSharp
 """
 This example shows how backtest over tweets
 """
 
-class TwitterBot(Stock.Model):
+class TwitterBot(StockSharp.Model):
     def main(self, args):
         while self.has_data:
             self.backtester.value_account()
@@ -92,11 +92,11 @@ class TwitterBot(Stock.Model):
 
 
 if __name__ == "__main__":
-    exchange = Stock.Alpaca()
+    exchange = StockSharp.Alpaca()
     model = TwitterBot(exchange)
 
     # Add the tweets json here
-    model.backtester.add_custom_events(Stock.data.JsonEventReader('./tweets.json'))
+    model.backtester.add_custom_events(StockSharp.data.JsonEventReader('./tweets.json'))
     # Now add some underlying prices at 1 month
     model.backtester.add_prices('TSLA', '1h', start_date='3/20/22', stop_date='4/15/22')
 
@@ -109,7 +109,7 @@ if __name__ == "__main__":
 
 ```
 
-PythonStock V3.0 是基于Python的pandas，akshare，bokeh，tornado，stockstats，ta-lib等框架开发的全栈股票系统。
+PythonStockSharp V3.0 是基于Python的pandas，akshare，bokeh，tornado，StockSharpstats，ta-lib等框架开发的全栈股票系统。
 项目创建于2017年7月17日，每月不定期更新。
 1）可以直接使用docker直接本地部署运行，整个项目在docker hub上压缩后200MB，本地占用500MB磁盘空间。
 2）使用Docker解决了Python库安装问题，使用Mariadb（MySQL）存储数据。借助akshare抓取数据。
@@ -128,7 +128,7 @@ PythonStock V3.0 是基于Python的pandas，akshare，bokeh，tornado，stocksta
 3，sqlalchemy使用【 2.0.36 】版本， 
 4，akshare使用【 1.15.59 】版本， 
 5，bokeh使用【 3.6.2 】版本， 
-6，stockstats使用【 0.3.2 】版本， 
+6，StockSharpstats使用【 0.3.2 】版本， 
 
 ```
 
@@ -163,6 +163,6 @@ erDiagram
 
  wouldn't be  without you. If we are going to disrupt financial industry, every contribution counts. Thank you for being part of this journey.
 
-<a href="https://github.com/Stock-finance/Stock/graphs/contributors">
-   <img src="https://contributors-img.web.app/image?repo=Stock-finance/Stock" width="800"/>
+<a href="https://github.com/StockSharp-finance/StockSharp/graphs/contributors">
+   <img src="https://contributors-img.web.app/image?repo=StockSharp-finance/StockSharp" width="800"/>
 </a>
