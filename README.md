@@ -18,11 +18,10 @@ VeighNa is a Python-based open source quantitative trading system development fr
 
 :rocket: :rocket: :rocket: **The VeighNa Elite Quantitative Terminal for professional traders has been officially released, providing comprehensive support for professional traders' needs in areas such as massive strategy concurrency, intelligent position rolling, algorithmic order execution, multi-account trading support, and more. For more detailed information, please scan the QR code below and follow the account, then click on the menu bar's [Community Exchange -> Elite Member Services]**:
 
-<a>
-  <div align="center">
-  <img src="https://github.com/user-attachments/assets/08e1350b-c185-4bb3-844c-194c84431405" alt="Logo" width="1000">
-  </div>
-</a>
+<p align="center">
+  <img src ="https://vnpy.oss-cn-shanghai.aliyuncs.com/alpha_demo.jpg"/, width=500>
+</p>
+
 
 
 They are:
@@ -66,8 +65,6 @@ If you want an enterprise UI to visualize this datasets and use AI agents on top
         * Lasso]: Classic Lasso regression model, implementing feature selection through L1 regularization
         * LightGBM: Efficient gradient boosting decision tree with a training engine optimized for large-scale datasets
         * MLP: Multi-layer perceptron neural network, suitable for modeling complex non-linear relationships
-
-![Shell500](https://github.com/user-attachments/assets/a28c24b7-8083-4c79-83e2-f26f1fc111ff)
 
 
 
