@@ -20,8 +20,11 @@
 
 
 ## Why Firefly Plugins?
-
 Firefly Plugins let you **build once, use anywhere** across backtests, paper trading, and live markets.
+
+<p align="center">
+	<img src="https://raw.githubusercontent.com/firefly-iii/firefly-iii/develop/.github/assets/img/imac-complete.png" alt="Firefly III on iMac" />
+</p>
 
 They are:
 - 🔌 Modular & reusable components
@@ -31,6 +34,22 @@ They are:
 
 Create, share, or combine plugins for indicators, strategies, risk controls, and more — all while keeping your code clean and scalable.
 
+## Features
+
+* Import from over 6000 banks
+* Import over the command line for easy automation
+* Import over an API for easy automation
+* Use rules and data mapping for transaction clarity
+
+"Firefly III" is a (self-hosted) manager for your personal finances. It can help you keep track of your expenses and income, so you can spend less and save more. Firefly III supports the use of budgets, categories and tags. Using a bunch of external tools, you can import data. It also has many neat financial reports available.
+
+Firefly III should give you **insight** into and **control** over your finances. Money should be useful, not scary. You should be able to *see* where it is going, to *feel* your expenses and to... wow, I'm going overboard with this aren't I?
+
+But you get the idea: this is your money. These are your expenses. Stop them from controlling you. I built this tool because I started to dislike money. Having money, not having money, paying bills with money, you get the idea. But no more. I want to feel "safe", whatever my balance is. And I hope this tool can help you. I know it helps me.
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/firefly-iii/firefly-iii/develop/.github/assets/img/ipad-complete.png" alt="Firefly III on iPad" width="600">
+</p>
 
 ### Trade Stocks, Crypto, Futures, and Forex
 
