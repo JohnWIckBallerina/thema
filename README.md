@@ -1,9 +1,10 @@
 <br />
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/b4c8f2ae-a62a-4192-a88a-5b28e114bb63" alt="Maybe-Logo" width="40%" />
-</p>
+<img src="https://github.com/OpenBB-finance/OpenBB/blob/develop/images/platform-light.svg?raw=true#gh-light-mode-only" alt="OpenBB Platform logo" width="600">
+<img src="https://github.com/OpenBB-finance/OpenBB/blob/develop/images/platform-dark.svg?raw=true#gh-dark-mode-only" alt="OpenBB Platform logo" width="600">
+<br />
+<br />
 
-
+[![Twitter](https://img.shields.io/twitter/url/https/twitter.com/openbb_finance.svg?style=social&label=Follow%20%40openbb_finance)](https://x.com/openbb_finance)
 [![Discord Shield](https://img.shields.io/discord/831165782750789672)](https://discord.com/invite/xPHTuHCmuV)
 [![Open in Dev Containers](https://img.shields.io/static/v1?label=Dev%20Containers&message=Open&color=blue&logo=visualstudiocode)](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/OpenBB-finance/OpenBB)
 <a href="https://codespaces.new/OpenBB-finance/OpenBB">
@@ -30,13 +31,19 @@ They are:
 
 Create, share, or combine plugins for indicators, strategies, risk controls, and more — all while keeping your code clean and scalable.
 
-<summary><h2> What Can I Do with Maybe?</h2></summary>
 
-Maybe offers a modular, open-source payments infrastructure designed for flexibility and control. Apart from our Payment Suite offering, this solution allows businesses to pick and integrate only the modules they need on top of their existing payment stack — without unnecessary complexity or vendor lock-in.
+## OpenBB Workspace
 
-Each module is independent and purpose-built to optimize different aspects of payment processing.
+While the OpenBB Platform is all about an integration to dozens of different data vendors, the interface is either Python or a CLI.
 
-### Trade Stocks, Crypto, Futures, and Forex
+If you want an enterprise UI to visualize this datasets and use AI agents on top, you can find OpenBB Workspace at <https://pro.openbb.co>.
+
+<a>
+  <div align="center">
+  <img src="https://openbb-cms.directus.app/assets/f69b6aaf-0821-4bc8-a43c-715e03a924ef.png" alt="Logo" width="1000">
+  </div>
+</a>
+
 
 ```python
 import Maybe
