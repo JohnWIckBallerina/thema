@@ -8,14 +8,16 @@
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a>
 
-[![image](https://gitee.com/pythonStockSharp/StockSharp/raw/master/frontend/public/StockSharp-001.png)]
+![image](https://github.com/user-attachments/assets/bda19367-faed-4c57-8c1f-4ded8119ca2a)
+
 
 ## Why StockSharp Plugins?
-Most scripts inside this repository are technical indicator automated trading. These scripts include various types of momentum trading, opening range breakout, reversal of support & resistance and statistical arbitrage strategies. Yet, quantitative trading is not only about technical analysis. It can refer to computational finance to exploit derivative price mismatch, pattern recognition on alternative datasets to generate alphas or low latency order execution in the market microstructure. Hence, there are a few ongoing projects inside this repository. These projects are mostly quantamental analysis on some strange ideas I come up with to beat the market (or so I thought). There is no HFT strategy simply because ultra high frequency data are very expensive to acquire (even consider platforms like Quantopian or Quandl). Additionally, please note that, all scripts are historical data backtesting/forward testing (basically via Python, not C++, maybe Julia in the near future). The assumption is that all trades are frictionless. No slippage, no surcharge, no illiquidity. Last but not least, all scripts contain a global function named main so that you can embed the scripts directly into you trading system (although too lazy to write docstring).
+**StockSharp** (shortly **S#**) – are **free** platform for trading at any markets of the world (crypto exchanges, American, European, Asian, Russian, stocks, futures, options, Bitcoins, forex, etc.). You will be able to trade manually or automated trading (algorithmic trading robots, conventional or HFT).
+**Available connections**: Binance, MT4, MT5, FIX/FAST, PolygonIO, Trading Technologies, Alpaca Markets, BarChart, CQG, E*Trade, IQFeed, InteractiveBrokers, LMAX, MatLab, Oanda, FXCM, Rithmic, cTrader, DXtrade, BitStamp, Bitfinex, Coinbase, Kraken, Poloniex, GDAX, Bittrex, Bithumb, OKX, Coincheck, CEX.IO, BitMEX, YoBit, Livecoin, EXMO, Deribit, HTX, KuCoin, QuantFEED and many other.
 
 <a>
   <div align="center">
-  <img src="https://gitee.com/pythonStockSharp/StockSharp/raw/master/frontend/public/StockSharp-003.png" alt="Logo" width="1000">
+  <img src="https://github.com/user-attachments/assets/08e1350b-c185-4bb3-844c-194c84431405" alt="Logo" width="1000">
   </div>
 </a>
 
@@ -28,26 +30,18 @@ They are:
 
 Create, share, or combine plugins for indicators, strategies, risk controls, and more — all while keeping your code clean and scalable.
 
-### v3.0发布，前端分离，项目和部署整合到一起
+![Hydra500](https://github.com/user-attachments/assets/b4799778-948a-4d16-a628-25da31a9ebb4)
 
-修改接口展示空。修改数据库脚本。
-解决预测数据买和卖的脚本。
-进行缩减、计算相关添加操作。
-修改启动脚本、接口路径及配置。
-设置分页数据。增加联合主键判断。
-解决分页问题并执行查询语句。
-增加日期查询方法。
-进行数据搜索相关添加操作。
-添加配置。修改路由地址。
-解决端口映射问题及修改端口测试。
-拆分前后端，用 dockerfile 构建镜像并解决前端编译问题。
-修改开发者模式，解决本地开发启动问题。
-增加地址。增加前端开发者模式启动。
-增加每天数据跑批。进行猜工作相关添加操作。
-增加日志跑数据。升级增加展示。
-架构升级并使用 vue 的 ui 开发。
-增加 install docker 说明。
-添加 vue api。
+
+Designer - free universal algorithmic strategies application for easy strategy creation:
+
+Visual designer to create strategies by mouse clicking
+Embedded C# editor
+Easy to create own indicators
+Build in debugger
+Connections to the multiple electronic boards and brokers
+All world platforms
+Schema sharing with own team
 
 ## StockSharp Workspace
 
@@ -58,18 +52,18 @@ If you want an enterprise UI to visualize this datasets and use AI agents on top
 ![image](https://gitee.com/pythonStockSharp/StockSharp/raw/master/frontend/public/StockSharp-002.png)
 
 ### 架构设计
-全系使用python实现。因为都是python的类库，互相之间调用方便。
-从数据抓取，数据处理，到数据展示数据运算都是python实现。
+**Hydra** - **free** software to automatically load and store market data:
+  - Supports many sources
+  - High compression ratio
+  - Any data type
+  - Program access to stored data via API
+  - Export to csv, excel, xml or database
+  - Import from csv
+  - Scheduled tasks
+  - Auto-sync over the Internet between several running programs S#.Data
 
-最终的数据都到前端展示出来。主要分为4个文件夹。
+![Shell500](https://github.com/user-attachments/assets/a28c24b7-8083-4c79-83e2-f26f1fc111ff)
 
-> jobs 抓取数据并存储实现类。
-> 
-> libs 通用工具类。
-> 
-> web 前端展示框架。
-> 
-> supervisor 进程管理工具。
 
 
 ```python
@@ -105,31 +99,47 @@ if __name__ == "__main__":
 
 ```
 
+**Shell** - the ready-made graphical framework with the ability to quickly change to your needs and with fully open source code in C#:
+  - Complete source code
+  - Support for all StockSharp platform connections
+  - Support for S#.Designer schemas
+  - Flexible user interface
+  - Strategy testing (statistics, equity, reports)
+  - Save and load strategy settings
+  - Launch strategies in parallel
+  - Detailed information on strategy performance 
+  - Launch strategies on schedule
+
 ## 🛠️ Installation
 
-```
+```C#
+public class SimpleStrategy : Strategy
+{
+	[Display(Name = "CandleSeries",
+		 GroupName = "Base settings")]
+	public CandleSeries CandleSeries { get; set; }
+	public SimpleStrategy(){}
 
-PythonStockSharp V3.0 是基于Python的pandas，akshare，bokeh，tornado，StockSharpstats，ta-lib等框架开发的全栈股票系统。
-项目创建于2017年7月17日，每月不定期更新。
-1）可以直接使用docker直接本地部署运行，整个项目在docker hub上压缩后200MB，本地占用500MB磁盘空间。
-2）使用Docker解决了Python库安装问题，使用Mariadb（MySQL）存储数据。借助akshare抓取数据。
-3）使用cron做定时任务，每天进行数据抓取计算，每天18点开始进行数据计算，计算当日数据，使用300天数据进行计算，大约需要15分钟计算完毕。
-4）股票数据接口防止被封，按天进行数据缓存，储存最近3天数据，每天定时清除，同时使用read_pickle to_pickle 的gzip压缩模式存储。
-5）使用tornado开发web系统，支持每日股票数据-东财，龙虎榜-个股上榜-新浪，数据中心-大宗交易行情等。
-6）数据展示系统，是通用数据展示系统，配置字典模板之后，页面自动加载数据，并完成数据展示，后续自己开发的指标数据可以加入进去。
-7）增加曲线数据分析，在查看股票中，可以直接跳转到东方财富页面查看相关信息，点击指标之后使用Bokeh将多达 17 个指标的数据绘图，进行图表展示。
-8）2.0 最大的更新在于替换tushare库（因部分库不能使用），使用akshare进行数据抓取。
-9）3.0 主要做的是项目整合，前端使用vue开发了，后端使用API,使用docker-compose开发部署。
+	protected override void OnStarted()
+	{
+		var connector = (Connector)Connector;
+		connector.WhenCandlesFinished(CandleSeries).Do(CandlesFinished).Apply(this);
+		connector.SubscribeCandles(CandleSeries);
+		base.OnStarted();
+	}
 
-基础库版本
-
-1，pandas使用【 2.2.3 】版本， 
-2，numpy使用【 2.2.1 】版本， 
-3，sqlalchemy使用【 2.0.36 】版本， 
-4，akshare使用【 1.15.59 】版本， 
-5，bokeh使用【 3.6.2 】版本， 
-6，StockSharpstats使用【 0.3.2 】版本， 
-
+	private void CandlesFinished(Candle candle)
+	{
+		if (candle.OpenPrice < candle.ClosePrice && Position <= 0)
+		{
+			RegisterOrder(this.BuyAtMarket(Volume + Math.Abs(Position)));
+		}
+		else if (candle.OpenPrice > candle.ClosePrice && Position >= 0)
+		{
+			RegisterOrder(this.SellAtMarket(Volume + Math.Abs(Position)));
+		}
+	}
+}
 ```
 
 ```mermaid
