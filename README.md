@@ -30,7 +30,7 @@ This is a proxy of our growth and that we are just getting started.
 
 ## Contributors
 
-OpenBB wouldn't be OpenBB without you. If we are going to disrupt financial industry, every contribution counts. Thank you for being part of this journey.
+ wouldn't be  without you. If we are going to disrupt financial industry, every contribution counts. Thank you for being part of this journey.
 
 <a href="https://github.com/OpenBB-finance/OpenBB/graphs/contributors">
    <img src="https://contributors-img.web.app/image?repo=OpenBB-finance/OpenBB" width="800"/>
