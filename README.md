@@ -12,19 +12,19 @@
 
 ```mermaid
 erDiagram
-    RSI_PLUGIN {
-        string id = "rsi-trading-plugin"
-        string name = "RSI Based Trader"
-        string type = "technical_analysis"
+    PLUGIN {
+        string id
+        string name
+        string type
     }
 
-    RSI_PLUGIN ||--o{ RSI_STRATEGY : implements
-    RSI_STRATEGY ||--o{ RSI_INDICATOR : uses
-    RSI_STRATEGY ||--o{ TRADE_EXECUTOR : runs
-    TRADE_EXECUTOR ||--o{ CRYPTO_MARKET : interacts
-    CRYPTO_MARKET }|--o{ BINANCE : connects
-    RSI_PLUGIN ||--o{ PLUGIN_CONFIG : requires
-    RSI_PLUGIN ||--o{ PLUGIN_LOGGER : logs
+    PLUGIN ||--o{ STRATEGY : implements
+    STRATEGY ||--o{ INDICATOR : uses
+    STRATEGY ||--o{ EXECUTOR : runs
+    EXECUTOR ||--o{ MARKET_INTERFACE : interacts
+    MARKET_INTERFACE }|--o{ EXCHANGE : connects
+    PLUGIN ||--o{ CONFIGURATION : requires
+    PLUGIN ||--o{ LOGGING : logs
 ```
 
 [![Discord Shield](https://img.shields.io/discord/831165782750789672)](https://discord.com/invite/xPHTuHCmuV)
