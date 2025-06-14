@@ -30,23 +30,40 @@ They are:
 
 Create, share, or combine plugins for indicators, strategies, risk controls, and more — all while keeping your code clean and scalable.
 
-## Features
+<summary><h2> What Can I Do with Hyperswitch?</h2></summary>
 
-* Import from over 6000 banks
-* Import over the command line for easy automation
-* Import over an API for easy automation
-* Use rules and data mapping for transaction clarity
+Hyperswitch offers a modular, open-source payments infrastructure designed for flexibility and control. Apart from our Payment Suite offering, this solution allows businesses to pick and integrate only the modules they need on top of their existing payment stack — without unnecessary complexity or vendor lock-in.
 
-"HyperSwitch III" is a (self-hosted) manager for your personal finances. It can help you keep track of your expenses and income, so you can spend less and save more. HyperSwitch III supports the use of budgets, categories and tags. Using a bunch of external tools, you can import data. It also has many neat financial reports available.
+Each module is independent and purpose-built to optimize different aspects of payment processing.
 
-HyperSwitch III should give you **insight** into and **control** over your finances. Money should be useful, not scary. You should be able to *see* where it is going, to *feel* your expenses and to... wow, I'm going overboard with this aren't I?
+<h3> Learn More About The Payment Modules </h3>
+<details>
 
-But you get the idea: this is your money. These are your expenses. Stop them from controlling you. I built this tool because I started to dislike money. Having money, not having money, paying bills with money, you get the idea. But no more. I want to feel "safe", whatever my balance is. And I hope this tool can help you. I know it helps me.
+- **Cost Observability**  
+  Advanced observability tools to audit, monitor, and optimize your payment costs. Detect hidden fees, downgrades, and penalties with self-serve dashboards and actionable insights.  
+  _[Read more](https://docs.hyperswitch.io/about-hyperswitch/payments-modules/ai-powered-cost-observability)_
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/HyperSwitch-iii/HyperSwitch-iii/develop/.github/assets/img/ipad-complete.png" alt="HyperSwitch III on iPad" width="600">
-</p>
+- **Revenue Recovery**  
+  Combat passive churn with intelligent retry strategies tuned by card bin, region, method, and more. Offers fine-grained control over retry algorithms, penalty budgets, and recovery transparency.  
+  _[Read more](https://docs.hyperswitch.io/about-hyperswitch/payments-modules/revenue-recovery)_
 
+- **Vault**  
+  A PCI-compliant vault service to store cards, tokens, wallets, and bank credentials. Provides a unified, secure, and reusable store of customer-linked payment methods.  
+  _[Read more](https://docs.hyperswitch.io/about-hyperswitch/payments-modules/vault)_
+
+- **Intelligent Routing**  
+  Route each transaction to the PSP with the highest predicted auth rate. Reduce retries, avoid downtime, and minimize latency while maximizing first attempt success.  
+  _[Read more](https://docs.hyperswitch.io/about-hyperswitch/payments-modules/intelligent-routing)_
+
+- **Reconciliation**  
+  Automate 2-way and 3-way reconciliation with backdated support, staggered scheduling, and customizable outputs. Reduces manual ops effort and increases audit confidence.  
+  _[Read more](https://docs.hyperswitch.io/about-hyperswitch/payments-modules/reconciliation)_
+
+- **Alternate Payment Methods**  
+  Drop-in widgets for PayPal, Apple Pay, Google Pay, Samsung Pay, Pay by Bank, and BNPL providers like Klarna. Maximizes conversions with seamless one-click checkout.  
+  _[Read more](https://docs.hyperswitch.io/about-hyperswitch/payments-modules/enable-alternate-payment-method-widgets)_
+
+</details>
 ### Trade Stocks, Crypto, Futures, and Forex
 
 ```python
