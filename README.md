@@ -4,6 +4,9 @@
   <img src="https://github.com/juspay/hyperswitch/raw/main/docs/imgs/hyperswitch-logo-dark.svg#gh-dark-mode-only" alt="Hyperswitch-Logo" width="40%" />
 </p>
 
+![SCR-20250120-ooto](https://github.com/user-attachments/assets/8c0bfb09-bb8e-4b56-bbb6-8f0df29263e4)
+
+
 [![Discord Shield](https://img.shields.io/discord/831165782750789672)](https://discord.com/invite/xPHTuHCmuV)
 [![Open in Dev Containers](https://img.shields.io/static/v1?label=Dev%20Containers&message=Open&color=blue&logo=visualstudiocode)](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/OpenBB-finance/OpenBB)
 <a href="https://codespaces.new/OpenBB-finance/OpenBB">
