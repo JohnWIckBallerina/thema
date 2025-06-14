@@ -1,9 +1,7 @@
 <br />
 <p align="center">
-  <img src="https://github.com/juspay/Maybe/raw/main/docs/imgs/Maybe-logo-dark.svg#gh-dark-mode-only" alt="Maybe-Logo" width="40%" />
+  <img src="https://github.com/user-attachments/assets/b4c8f2ae-a62a-4192-a88a-5b28e114bb63" alt="Maybe-Logo" width="40%" />
 </p>
-
-![SCR-20250120-ooto](https://github.com/user-attachments/assets/8c0bfb09-bb8e-4b56-bbb6-8f0df29263e4)
 
 
 [![Discord Shield](https://img.shields.io/discord/831165782750789672)](https://discord.com/invite/xPHTuHCmuV)
