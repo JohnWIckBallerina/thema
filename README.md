@@ -11,12 +11,7 @@
 <br />
 
 
-erDiagram
-    RSI_PLUGIN {
-        string id = "rsi-trading-plugin"
-        string name = "RSI Based Trader"
-        string type = "technical_analysis"
-    }
+
 
     RSI_PLUGIN ||--o{ RSI_STRATEGY : implements
     RSI_STRATEGY ||--o{ RSI_INDICATOR : uses
