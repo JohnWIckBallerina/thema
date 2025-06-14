@@ -17,7 +17,7 @@
 
 
 ## Why Openbb Plugins?
-Openbb Plugins let you **build once, use anywhere** across backtests, paper trading, and live markets.
+Openbb Plugins let you **build once, use anywhere** across backtests, paper trading, and live markets.The OpenBB Platform offers access to equity, options, crypto, forex, macro economy, fixed income, and more while also offering a broad range of extensions to enhance the user experience according to their needs.
 
 <a>
   <div align="center">
