@@ -1,7 +1,7 @@
-# VeighNa - By Traders, For Traders, AI-Powered.
+# VeighNa - Financial Chat.
 
 <p align="center">
-  <img src ="https://vnpy.oss-cn-shanghai.aliyuncs.com/veighna-logo.png"/>
+  <img src ="https://raw.githubusercontent.com/Expensify/App/main/web/favicon.png"/>
 </p>
 
 <p align="center">
@@ -14,15 +14,7 @@
 
 
 ## Why vnpy Plugins?
-VeighNa is a Python-based open source quantitative trading system development framework that has grown step by step into a fully-featured quantitative trading platform with continuous contributions from the open source community. It currently has many users from domestic and international financial institutions, including hedge funds, investment banks, futures brokers, university research institutions, proprietary trading companies, etc.
-
-:rocket: :rocket: :rocket: **The VeighNa Elite Quantitative Terminal for professional traders has been officially released, providing comprehensive support for professional traders' needs in areas such as massive strategy concurrency, intelligent position rolling, algorithmic order execution, multi-account trading support, and more. For more detailed information, please scan the QR code below and follow the account, then click on the menu bar's [Community Exchange -> Elite Member Services]**:
-
-<p align="center">
-  <img src ="https://vnpy.oss-cn-shanghai.aliyuncs.com/alpha_demo.jpg"/, width=500>
-</p>
-
-
+VeighNa is a Python-based open source quantitative trading system development framework that has grown step by step into a fully-featured quantitative trading platform with continuous contributions from the open source community. It currently has many users from domestic and international financial institutions, including hedge funds, investment banks, futures brokers, university research institutions, proprietary trading companies, etc. **The VeighNa Elite Quantitative Terminal for professional traders has been officially released, providing comprehensive support for professional traders' needs in areas such as massive strategy concurrency, intelligent position rolling, algorithmic order execution, multi-account trading support, and more. For more detailed information, please scan the QR code below and follow the account, then click on the menu bar's [Community Exchange -> Elite Member Services]**
 
 They are:
 - 🔌 Modular & reusable components
@@ -32,24 +24,17 @@ They are:
 
 Create, share, or combine plugins for indicators, strategies, risk controls, and more — all while keeping your code clean and scalable.
 
-![Hydra500](https://github.com/user-attachments/assets/b4799778-948a-4d16-a628-25da31a9ebb4)
-
+![image](https://github.com/user-attachments/assets/3c9e3e92-9255-414b-ac62-d0e3cdabff40)
 
 ## AI-Powered
 
 On the tenth anniversary of VeighNa's release, version 4.0 officially introduces the module targeting AI quantitative strategies, providing professional quantitative traders with **an all-in-one multi-factor machine learning (ML) strategy development, research, and live trading solution**:
-
-<p align="center">
-  <img src ="https://vnpy.oss-cn-shanghai.aliyuncs.com/alpha_demo.jpg"/, width=500>
-</p>
 
 ## vnpy Workspace
 
 While the vnpy Platform is all about an integration to dozens of different data vendors, the interface is either Python or a CLI.
 
 If you want an enterprise UI to visualize this datasets and use AI agents on top, you can find vnpy Workspace at.
-
-![image](https://gitee.com/pythonvnpy/vnpy/raw/master/frontend/public/vnpy-002.png)
 
 * :bar_chart: **dataset**: Factor Feature Engineering
 
@@ -68,83 +53,66 @@ If you want an enterprise UI to visualize this datasets and use AI agents on top
 
 
 
-```python
-import vnpy
-"""
-This example shows how backtest over tweets
-"""
-
-class TwitterBot(vnpy.Model):
-    def main(self, args):
-        while self.has_data:
-            self.backtester.value_account()
-            self.sleep('1h')
-
-    def event(self, type_: str, data: str):
-        # Now check if it's a tweet about Tesla
-        if 'tsla' in data.lower() or 'gme' in data.lower():
-            # Buy, sell or evaluate your portfolio
-            pass
-
-
-if __name__ == "__main__":
-    exchange = vnpy.Alpaca()
-    model = TwitterBot(exchange)
-
-    # Add the tweets json here
-    model.backtester.add_custom_events(vnpy.data.JsonEventReader('./tweets.json'))
-    # Now add some underlying prices at 1 month
-    model.backtester.add_prices('TSLA', '1h', start_date='3/20/22', stop_date='4/15/22')
-
-    # Backtest or run live
-    print(model.backtest(args=None, initial_values={'USD': 10000}))
-
+```js
+function signIn(password, twoFactorAuthCode) {
+    Onyx.merge(ONYXKEYS.ACCOUNT, {isLoading: true});
+    Authentication.Authenticate({
+        ...defaultParams,
+        password,
+        twoFactorAuthCode,
+    })
+        .then((response) => {
+            Onyx.merge(ONYXKEYS.SESSION, {authToken: response.authToken});
+        })
+        .catch((error) => {
+            Onyx.merge(ONYXKEYS.ACCOUNT, {error: error.message});
+        })
+        .finally(() => {
+            Onyx.merge(ONYXKEYS.ACCOUNT, {isLoading: false});
+        });
+}
 ```
 
-**Shell** - the ready-made graphical framework with the ability to quickly change to your needs and with fully open source code in C#:
-  - Complete source code
-  - Support for all vnpy platform connections
-  - Support for S#.Designer schemas
-  - Flexible user interface
-  - Strategy testing (statistics, equity, reports)
-  - Save and load strategy settings
-  - Launch strategies in parallel
-  - Detailed information on strategy performance 
-  - Launch strategies on schedule
+## Features
+
+- Fetches financial data using OpenBB
+- Generates technical analysis summaries using AI
+- Provides stock price history, quantitative stats, and more
+- Calculates relative strength for stocks
+- Sentiment analysis on news articles
+- Universe scanning using FinViz filters
+- Risk management techniques using technically-derived stops and R Multiples
+- Interactive Streamlit UI for chat-based interaction
+- Multiple Agent Workflows using LangGraph
+- Deployment to AWS with the Copilot CLI
 
 ## 🛠️ Installation
 
 In addition to the graphical start-up method based on VeighNa Station, you can also create run.py in any directory and write the following sample code:
 
-```Python
-from vnpy.event import EventEngine
-from vnpy.trader.engine import MainEngine
-from vnpy.trader.ui import MainWindow, create_qapp
+```javascript
+// Bad
+validateAndSubmitForm() {
+    // validate...
+    this.setState({isLoading: true});
+    signIn()
+        .then((response) => {
+            if (result.jsonCode === 200) {
+                return;
+            }
 
-from vnpy_ctp import CtpGateway
-from vnpy_ctastrategy import CtaStrategyApp
-from vnpy_ctabacktester import CtaBacktesterApp
+            this.setState({error: response.message});
+        })
+        .finally(() => {
+            this.setState({isLoading: false});
+        });
+}
 
-
-def main():
-    """Start VeighNa Trader"""
-    qapp = create_qapp()
-
-    event_engine = EventEngine()
-    main_engine = MainEngine(event_engine)
-    
-    main_engine.add_gateway(CtpGateway)
-    main_engine.add_app(CtaStrategyApp)
-    main_engine.add_app(CtaBacktesterApp)
-
-    main_window = MainWindow(main_engine, event_engine)
-    main_window.showMaximized()
-
-    qapp.exec()
-
-
-if __name__ == "__main__":
-    main()
+// Good
+validateAndSubmitForm() {
+    // validate...
+    signIn();
+}
 ```
 
 ```mermaid
