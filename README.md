@@ -1,14 +1,12 @@
 <br />
 
-<div align="center">
-   <img style="margin: 0 auto; padding-bottom: 15px; padding-top: 30px" width=70%" src="https://firebasestorage.googleapis.com/v0/b/blankly-6ada5.appspot.com/o/blankly-github-logo.png?alt=media&token=8f436cd2-3d28-432c-867a-afef780f4260">
-</div>
 <br />
-
-<div align="center">
-  <b>💨  Rapidly build and deploy quantitative models for stocks, crypto, and forex  🚀</b>
-</div>
-<br />
+<p align="center">
+  <a href="https://firefly-iii.org/">
+    <img src="https://raw.githubusercontent.com/firefly-iii/firefly-iii/develop/.github/assets/img/logo-small.png" alt="Firefly III" width="120" height="178">
+  </a>
+</p>
+  <h1 align="center">Firefly III</h1>
 
 [![Discord Shield](https://img.shields.io/discord/831165782750789672)](https://discord.com/invite/xPHTuHCmuV)
 [![Open in Dev Containers](https://img.shields.io/static/v1?label=Dev%20Containers&message=Open&color=blue&logo=visualstudiocode)](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/OpenBB-finance/OpenBB)
@@ -21,9 +19,9 @@
 [![PyPI](https://img.shields.io/pypi/v/openbb?color=blue&label=PyPI%20Package)](https://pypi.org/project/openbb/)
 
 
-## Why Blankly Plugins?
+## Why Firefly Plugins?
 
-Blankly Plugins let you **build once, use anywhere** across backtests, paper trading, and live markets.
+Firefly Plugins let you **build once, use anywhere** across backtests, paper trading, and live markets.
 
 They are:
 - 🔌 Modular & reusable components
@@ -34,13 +32,13 @@ They are:
 Create, share, or combine plugins for indicators, strategies, risk controls, and more — all while keeping your code clean and scalable.
 
 <div align="center">
-<a target="_blank" href="https://youtu.be/pcm0h63rhUU"><img src="https://firebasestorage.googleapis.com/v0/b/blankly-6ada5.appspot.com/o/github%2Fbuild_a_bot_readme_thumbnail.jpg?alt=media&token=a9dd030a-805c-447f-a970-2bc8e1815662" style="border-radius:10px; width: 50%"></a>
+<a target="_blank" href="https://youtu.be/pcm0h63rhUU"><img src="https://firebasestorage.googleapis.com/v0/b/Firefly-6ada5.appspot.com/o/github%2Fbuild_a_bot_readme_thumbnail.jpg?alt=media&token=a9dd030a-805c-447f-a970-2bc8e1815662" style="border-radius:10px; width: 50%"></a>
 </div>
 
 ### Trade Stocks, Crypto, Futures, and Forex
 
 ```python
-from blankly import Alpaca, CoinbasePro
+from Firefly import Alpaca, CoinbasePro
 
 stocks = Alpaca()
 crypto = CoinbasePro()
@@ -56,12 +54,12 @@ futures.interface.get_hedge_mode()
 ### Backtest your trades, events, websockets, and custom data
 
 ```python
-import blankly
+import Firefly
 """
 This example shows how backtest over tweets
 """
 
-class TwitterBot(blankly.Model):
+class TwitterBot(Firefly.Model):
     def main(self, args):
         while self.has_data:
             self.backtester.value_account()
@@ -75,11 +73,11 @@ class TwitterBot(blankly.Model):
 
 
 if __name__ == "__main__":
-    exchange = blankly.Alpaca()
+    exchange = Firefly.Alpaca()
     model = TwitterBot(exchange)
 
     # Add the tweets json here
-    model.backtester.add_custom_events(blankly.data.JsonEventReader('./tweets.json'))
+    model.backtester.add_custom_events(Firefly.data.JsonEventReader('./tweets.json'))
     # Now add some underlying prices at 1 month
     model.backtester.add_prices('TSLA', '1h', start_date='3/20/22', stop_date='4/15/22')
 
@@ -91,7 +89,7 @@ if __name__ == "__main__":
 #### Accurate Backtest Holdings
 
 <div align="center">
-    <a><img src="https://firebasestorage.googleapis.com/v0/b/blankly-6ada5.appspot.com/o/github%2FScreen%20Shot%202022-04-17%20at%202.37.58%20PM.png?alt=media&token=d5738617-e197-4da2-850d-8fbbfda05275" style="border-radius:10px"></a>
+    <a><img src="https://firebasestorage.googleapis.com/v0/b/Firefly-6ada5.appspot.com/o/github%2FScreen%20Shot%202022-04-17%20at%202.37.58%20PM.png?alt=media&token=d5738617-e197-4da2-850d-8fbbfda05275" style="border-radius:10px"></a>
 </div>
 
 
@@ -117,8 +115,8 @@ Make sure you have the following tools installed on your system:
 Clone the project repository using Git:
 
 ```bash
-git clone https://github.com/your-username/blankly-finance-plugins-RSI-Based-Crypto-Trading.git 
-cd blankly-finance-plugins-RSI-Based-Crypto-Trading
+git clone https://github.com/your-username/Firefly-finance-plugins-RSI-Based-Crypto-Trading.git 
+cd Firefly-finance-plugins-RSI-Based-Crypto-Trading
 ```
 
 Replace `your-username` with your GitHub username.
@@ -195,8 +193,8 @@ node index.js --plugin rsi --config config/rsi-config.yaml
 Build and run the plugin using Docker:
 
 ```bash
-docker build -t blankly-rsi-plugin .
-docker run -it --env-file .env blankly-rsi-plugin
+docker build -t Firefly-rsi-plugin .
+docker run -it --env-file .env Firefly-rsi-plugin
 ```
 
 ```mermaid
