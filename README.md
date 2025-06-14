@@ -20,6 +20,111 @@
 </a>
 [![PyPI](https://img.shields.io/pypi/v/openbb?color=blue&label=PyPI%20Package)](https://pypi.org/project/openbb/)
 
+
+## 🛠️ Installation
+
+Follow the steps below to install and run this project on your local machine.
+
+### 1. 📦 Prerequisites
+
+Make sure you have the following tools installed on your system:
+
+- [Node.js](https://nodejs.org/)  (v14.x or newer)
+- [npm](https://www.npmjs.com/)  (comes with Node.js)
+- [Git](https://git-scm.com/) 
+- Python 3.x (optional, if any indicators or tools require it)
+
+> You can also use Docker to run the project in an isolated environment.
+
+---
+
+### 2. 🌐 Clone the Repository
+
+Clone the project repository using Git:
+
+```bash
+git clone https://github.com/your-username/blankly-finance-plugins-RSI-Based-Crypto-Trading.git 
+cd blankly-finance-plugins-RSI-Based-Crypto-Trading
+```
+
+Replace `your-username` with your GitHub username.
+
+---
+
+### 3. 📦 Install Dependencies
+
+Install the required npm packages:
+
+```bash
+npm install
+```
+
+If the plugin uses Python-based tools or indicators, install the Python dependencies as well:
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+### 4. 🔐 Set Up Exchange API Keys
+
+To allow the plugin to interact with cryptocurrency exchanges, set up your API credentials.
+
+Create a `.env` file in the root directory and add your exchange keys:
+
+```env
+EXCHANGE_API_KEY=your_api_key_here
+EXCHANGE_SECRET_KEY=your_secret_key_here
+```
+
+> Make sure not to commit this file to version control. It should remain private.
+
+---
+
+### 5. ⚙️ Configure the Plugin
+
+Each plugin comes with a configuration file. For example:
+
+```yaml
+# config/rsi-config.yaml
+strategy:
+  rsi_period: 14
+  overbought_threshold: 70
+  oversold_threshold: 30
+  symbol: BTC/USDT
+  interval: "1h"
+```
+
+You can modify these values based on your trading preferences.
+
+---
+
+### 6. ▶️ Run the Plugin
+
+Once everything is set up, start the plugin:
+
+```bash
+npm start -- --plugin rsi --config config/rsi-config.yaml
+```
+
+Or, if you're using a custom script:
+
+```bash
+node index.js --plugin rsi --config config/rsi-config.yaml
+```
+
+---
+
+### 7. 🐳 Optional: Run with Docker
+
+Build and run the plugin using Docker:
+
+```bash
+docker build -t blankly-rsi-plugin .
+docker run -it --env-file .env blankly-rsi-plugin
+```
+
 ```mermaid
 erDiagram
     PLUGIN {
