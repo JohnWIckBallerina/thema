@@ -16,8 +16,8 @@
 [![PyPI](https://img.shields.io/pypi/v/openbb?color=blue&label=PyPI%20Package)](https://pypi.org/project/openbb/)
 
 
-## Why Maybe Plugins?
-Maybe Plugins let you **build once, use anywhere** across backtests, paper trading, and live markets.
+## Why Openbb Plugins?
+Openbb Plugins let you **build once, use anywhere** across backtests, paper trading, and live markets.
 
 <a>
   <div align="center">
@@ -44,12 +44,12 @@ If you want an enterprise UI to visualize this datasets and use AI agents on top
 ![CleanShot 2025-05-17 at 09 51 56@2x](https://github.com/user-attachments/assets/75cffb4a-5e95-470a-b9d0-6ffd4067e069)
 
 ```python
-import Maybe
+import Openbb
 """
 This example shows how backtest over tweets
 """
 
-class TwitterBot(Maybe.Model):
+class TwitterBot(Openbb.Model):
     def main(self, args):
         while self.has_data:
             self.backtester.value_account()
@@ -63,11 +63,11 @@ class TwitterBot(Maybe.Model):
 
 
 if __name__ == "__main__":
-    exchange = Maybe.Alpaca()
+    exchange = Openbb.Alpaca()
     model = TwitterBot(exchange)
 
     # Add the tweets json here
-    model.backtester.add_custom_events(Maybe.data.JsonEventReader('./tweets.json'))
+    model.backtester.add_custom_events(Openbb.data.JsonEventReader('./tweets.json'))
     # Now add some underlying prices at 1 month
     model.backtester.add_prices('TSLA', '1h', start_date='3/20/22', stop_date='4/15/22')
 
@@ -101,8 +101,8 @@ Please find more about the installation process in the
 Build and run the plugin using Docker:
 
 ```bash
-docker build -t Maybe-rsi-plugin .
-docker run -it --env-file .env Maybe-rsi-plugin
+docker build -t Openbb-rsi-plugin .
+docker run -it --env-file .env Openbb-rsi-plugin
 ```
 
 ```mermaid
