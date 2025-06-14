@@ -32,7 +32,7 @@ They are:
 Create, share, or combine plugins for indicators, strategies, risk controls, and more — all while keeping your code clean and scalable.
 
 <div align="center">
-<a target="_blank" href="https://youtu.be/pcm0h63rhUU"><img src="https://firebasestorage.googleapis.com/v0/b/Firefly-6ada5.appspot.com/o/github%2Fbuild_a_bot_readme_thumbnail.jpg?alt=media&token=a9dd030a-805c-447f-a970-2bc8e1815662" style="border-radius:10px; width: 50%"></a>
+<a target="_blank" href="https://youtu.be/pcm0h63rhUU"><img src="https://firebasestorage.googleapis.com/v0/b/blankly-6ada5.appspot.com/o/github%2Fbuild_a_bot_readme_thumbnail.jpg?alt=media&token=a9dd030a-805c-447f-a970-2bc8e1815662" style="border-radius:10px; width: 50%"></a>
 </div>
 
 ### Trade Stocks, Crypto, Futures, and Forex
