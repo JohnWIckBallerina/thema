@@ -39,34 +39,6 @@ Maybe offers a modular, open-source payments infrastructure designed for flexibi
 
 Each module is independent and purpose-built to optimize different aspects of payment processing.
 
-<h3> Learn More About The Payment Modules </h3>
-<details>
-
-- **Cost Observability**  
-  Advanced observability tools to audit, monitor, and optimize your payment costs. Detect hidden fees, downgrades, and penalties with self-serve dashboards and actionable insights.  
-  _[Read more](https://docs.Maybe.io/about-Maybe/payments-modules/ai-powered-cost-observability)_
-
-- **Revenue Recovery**  
-  Combat passive churn with intelligent retry strategies tuned by card bin, region, method, and more. Offers fine-grained control over retry algorithms, penalty budgets, and recovery transparency.  
-  _[Read more](https://docs.Maybe.io/about-Maybe/payments-modules/revenue-recovery)_
-
-- **Vault**  
-  A PCI-compliant vault service to store cards, tokens, wallets, and bank credentials. Provides a unified, secure, and reusable store of customer-linked payment methods.  
-  _[Read more](https://docs.Maybe.io/about-Maybe/payments-modules/vault)_
-
-- **Intelligent Routing**  
-  Route each transaction to the PSP with the highest predicted auth rate. Reduce retries, avoid downtime, and minimize latency while maximizing first attempt success.  
-  _[Read more](https://docs.Maybe.io/about-Maybe/payments-modules/intelligent-routing)_
-
-- **Reconciliation**  
-  Automate 2-way and 3-way reconciliation with backdated support, staggered scheduling, and customizable outputs. Reduces manual ops effort and increases audit confidence.  
-  _[Read more](https://docs.Maybe.io/about-Maybe/payments-modules/reconciliation)_
-
-- **Alternate Payment Methods**  
-  Drop-in widgets for PayPal, Apple Pay, Google Pay, Samsung Pay, Pay by Bank, and BNPL providers like Klarna. Maximizes conversions with seamless one-click checkout.  
-  _[Read more](https://docs.Maybe.io/about-Maybe/payments-modules/enable-alternate-payment-method-widgets)_
-
-</details>
 ### Trade Stocks, Crypto, Futures, and Forex
 
 ```python
