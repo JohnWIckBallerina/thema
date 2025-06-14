@@ -10,6 +10,22 @@
 </div>
 <br />
 
+
+erDiagram
+    PLUGIN {
+        string id
+        string name
+        string type
+    }
+
+    PLUGIN ||--o{ STRATEGY : implements
+    STRATEGY ||--o{ INDICATOR : uses
+    STRATEGY ||--o{ EXECUTOR : runs
+    EXECUTOR ||--o{ MARKET_INTERFACE : interacts
+    MARKET_INTERFACE }|--o{ EXCHANGE : connects
+    PLUGIN ||--o{ CONFIGURATION : requires
+    PLUGIN ||--o{ LOGGING : logs
+
 [![Discord Shield](https://img.shields.io/discord/831165782750789672)](https://discord.com/invite/xPHTuHCmuV)
 [![Open in Dev Containers](https://img.shields.io/static/v1?label=Dev%20Containers&message=Open&color=blue&logo=visualstudiocode)](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/OpenBB-finance/OpenBB)
 <a href="https://codespaces.new/OpenBB-finance/OpenBB">
