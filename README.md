@@ -2,7 +2,6 @@
 
 <p align="center">
   <img src="https://github.com/juspay/hyperswitch/raw/main/docs/imgs/hyperswitch-logo-dark.svg#gh-dark-mode-only" alt="Hyperswitch-Logo" width="40%" />
-  <img src="https://github.com/juspay/hyperswitch/raw/main/docs/imgs/hyperswitch-logo-dark.svg#gh-dark-mode-only" alt="Hyperswitch-Logo" width="40%" />
 </p>
 
   <h1 align="center">Juspay Hyperswitch</h1>
