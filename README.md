@@ -1,5 +1,4 @@
 <br />
-
 <p align="center">
   <img src="https://github.com/juspay/Maybe/raw/main/docs/imgs/Maybe-logo-dark.svg#gh-dark-mode-only" alt="Maybe-Logo" width="40%" />
 </p>
