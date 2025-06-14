@@ -37,6 +37,62 @@ Create, share, or combine plugins for indicators, strategies, risk controls, and
 <a target="_blank" href="https://youtu.be/pcm0h63rhUU"><img src="https://firebasestorage.googleapis.com/v0/b/blankly-6ada5.appspot.com/o/github%2Fbuild_a_bot_readme_thumbnail.jpg?alt=media&token=a9dd030a-805c-447f-a970-2bc8e1815662" style="border-radius:10px; width: 50%"></a>
 </div>
 
+### Trade Stocks, Crypto, Futures, and Forex
+
+```python
+from blankly import Alpaca, CoinbasePro
+
+stocks = Alpaca()
+crypto = CoinbasePro()
+futures = BinanceFutures()
+
+# Easily perform the same actions across exchanges & asset types
+stocks.interface.market_order('AAPL', 'buy', 1)
+crypto.interface.market_order('BTC-USD', 'buy', 1)
+# Full futures feature set
+futures.interface.get_hedge_mode()
+```
+
+### Backtest your trades, events, websockets, and custom data
+
+```python
+import blankly
+"""
+This example shows how backtest over tweets
+"""
+
+class TwitterBot(blankly.Model):
+    def main(self, args):
+        while self.has_data:
+            self.backtester.value_account()
+            self.sleep('1h')
+
+    def event(self, type_: str, data: str):
+        # Now check if it's a tweet about Tesla
+        if 'tsla' in data.lower() or 'gme' in data.lower():
+            # Buy, sell or evaluate your portfolio
+            pass
+
+
+if __name__ == "__main__":
+    exchange = blankly.Alpaca()
+    model = TwitterBot(exchange)
+
+    # Add the tweets json here
+    model.backtester.add_custom_events(blankly.data.JsonEventReader('./tweets.json'))
+    # Now add some underlying prices at 1 month
+    model.backtester.add_prices('TSLA', '1h', start_date='3/20/22', stop_date='4/15/22')
+
+    # Backtest or run live
+    print(model.backtest(args=None, initial_values={'USD': 10000}))
+
+```
+
+#### Accurate Backtest Holdings
+
+<div align="center">
+    <a><img src="https://firebasestorage.googleapis.com/v0/b/blankly-6ada5.appspot.com/o/github%2FScreen%20Shot%202022-04-17%20at%202.37.58%20PM.png?alt=media&token=d5738617-e197-4da2-850d-8fbbfda05275" style="border-radius:10px"></a>
+</div>
 
 
 ## 🛠️ Installation
