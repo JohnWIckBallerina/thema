@@ -1,151 +1,228 @@
-# VeighNa - Financial Chat.
+
+
+<br />
+
+<div align="center">
+   <img style="margin: 0 auto; padding-bottom: 15px; padding-top: 30px" width=70%" src="https://firebasestorage.googleapis.com/v0/b/blankly-6ada5.appspot.com/o/blankly-github-logo.png?alt=media&token=8f436cd2-3d28-432c-867a-afef780f4260">
+</div>
+<br />
+
+<div align="center">
+  <b>💨  Rapidly build and deploy quantitative models for stocks, crypto, and forex  🚀</b>
+</div>
+<br />
+
 
 <p align="center">
-  <img src ="https://raw.githubusercontent.com/Expensify/App/main/web/favicon.png"/>
+   <a target="_blank" href="https://sonarcloud.io/dashboard?id=Blankly-Finance_Blankly"><img src="https://sonarcloud.io/api/project_badges/measure?project=Blankly-Finance_Blankly&metric=sqale_rating"></a>
+   <a target="_blank" href="https://sonarcloud.io/dashboard?id=Blankly-Finance_Blankly"><img src="https://sonarcloud.io/api/project_badges/measure?project=Blankly-Finance_Blankly&metric=alert_status"></a>
+   <a target="_blank" href="https://github.com/Blankly-Finance/Blankly/actions/workflows/test.yml"><img src="https://github.com/Blankly-Finance/Blankly/actions/workflows/test.yml/badge.svg?branch=main"></a> <br>
+   <a target="_blank" href="https://static.pepy.tech/badge/blankly"><img src="https://static.pepy.tech/badge/blankly"></a>
+   <a target="_blank" href="https://github.com/Blankly-Finance/Blankly/blob/main/LICENSE"><img src="https://img.shields.io/pypi/l/blankly?color=gree"></a>
+   <a target="_blank" href="https://github.com/Blankly-Finance/Blankly/stargazers"><img src="https://img.shields.io/github/stars/blankly-finance/blankly?style=social"></a>
+   <a target="_blank" href="https://discord.gg/XWcmy7Y9bb"><img src="https://img.shields.io/discord/821563936297451530.svg?color=7289da&label=Blankly%20Discord&logo=discord&style=flat"></a>
 </p>
-
 <p align="center">
-    <img src ="https://img.shields.io/badge/version-4.0.0-blueviolet.svg"/>
-    <img src ="https://img.shields.io/badge/platform-windows|linux|macos-yellow.svg"/>
-    <img src ="https://img.shields.io/badge/python-3.10|3.11|3.12|3.13-blue.svg" />
-    <img src ="https://img.shields.io/github/actions/workflow/status/Financial Chat/Financial Chat/pythonapp.yml?branch=master"/>
-    <img src ="https://img.shields.io/github/license/Financial Chat/Financial Chat.svg?color=orange"/>
-</p>
+    <a target="_blank" href="https://docs.blankly.finance">View Docs</a>
+    ·
+    <a target="_blank" href="https://blankly.finance">Our Website</a>
+    ·
+    <a target="_blank" href="https://blankly.substack.com">Join Our Newsletter</a>
+    ·
+    <a href="#quickstart">Getting Started</a>
+  </p>
 
+---
 
-## Why Financial Chat?
-VeighNa is a Python-based open source quantitative trading system development framework that has grown step by step into a fully-featured quantitative trading platform with continuous contributions from the open source community. It currently has many users from domestic and international financial institutions, including hedge funds, investment banks, futures brokers, university research institutions, proprietary trading companies, etc. **The VeighNa Elite Quantitative Terminal for professional traders has been officially released, providing comprehensive support for professional traders' needs in areas such as massive strategy concurrency, intelligent position rolling, algorithmic order execution, multi-account trading support, and more. For more detailed information, please scan the QR code below and follow the account, then click on the menu bar's [Community Exchange -> Elite Member Services]**
+## Why Blankly? 
 
-They are:
-- 🔌 Modular & reusable components
-- 📦 Environment-agnostic (backtest, sandbox, live)
-- 🧩 Easy to plug into any strategy or workflow
-- 🌐 Exchange-agnostic with unified interfaces
+Blankly is an ecosystem for algotraders enabling anyone to build, monetize and scale their trading algorithms for stocks, crypto, futures or forex. The same code can be backtested, paper traded, sandbox tested and run live by simply changing a single line. Develop locally then deploy, iterate and share using the blankly platform.
 
-Create, share, or combine for indicators, strategies, risk controls, and more — all while keeping your code clean and scalable.
+The blankly package is designed to be **extremely precise** in both simulation and live trading. **The engineering considerations for highly accurate simulation are described [here](blankly/BACKTESTING_ENGINEERING.md)**
 
-![image](https://github.com/user-attachments/assets/3c9e3e92-9255-414b-ac62-d0e3cdabff40)
+Getting started is easy - just `pip install blankly` and `blankly init`.
 
-## AI-Powered
+Check out our [website](https://blankly.finance) and our [docs](https://docs.blankly.finance).
 
-On the tenth anniversary of VeighNa's release, version 4.0 officially introduces the module targeting AI quantitative strategies, providing professional quantitative traders with **an all-in-one multi-factor machine learning (ML) strategy development, research, and live trading solution**:
+<div align="center">
+<a target="_blank" href="https://youtu.be/pcm0h63rhUU"><img src="https://firebasestorage.googleapis.com/v0/b/blankly-6ada5.appspot.com/o/github%2Fbuild_a_bot_readme_thumbnail.jpg?alt=media&token=a9dd030a-805c-447f-a970-2bc8e1815662" style="border-radius:10px; width: 50%"></a>
+</div>
 
-## Financial Chat Workspace
+---------
 
-While the Financial Chat Platform is all about an integration to dozens of different data vendors, the interface is either Python or a CLI.
+### Trade Stocks, Crypto, Futures, and Forex
 
-If you want an enterprise UI to visualize this datasets and use AI agents on top, you can find Financial Chat Workspace at.
+```python
+from blankly import Alpaca, CoinbasePro
 
-* :bar_chart: **dataset**: Factor Feature Engineering
+stocks = Alpaca()
+crypto = CoinbasePro()
+futures = BinanceFutures()
 
-    * Designed specifically for ML algorithm training optimization, supporting efficient batch feature calculation and processing
-    * Built-in rich factor feature expression calculation engine, enabling rapid one-click generation of training data
-    * Alpha 158: A collection of stock market features from Microsoft's Qlib project, covering multiple dimensions of quantitative factors including K-line patterns, price trends, and time-series volatility
-
-* :bulb: **model**: Prediction Model Training
-
-    * Provides standardized ML model development templates, greatly simplifying model building and training processes
-    * Unified API interface design, supporting seamless switching between different algorithms for performance comparison testing
-    * Integrates multiple mainstream machine learning algorithms:
-        * Lasso]: Classic Lasso regression model, implementing feature selection through L1 regularization
-        * LightGBM: Efficient gradient boosting decision tree with a training engine optimized for large-scale datasets
-        * MLP: Multi-layer perceptron neural network, suitable for modeling complex non-linear relationships
-
-
-
-```js
-function signIn(password, twoFactorAuthCode) {
-    Onyx.merge(ONYXKEYS.ACCOUNT, {isLoading: true});
-    Authentication.Authenticate({
-        ...defaultParams,
-        password,
-        twoFactorAuthCode,
-    })
-        .then((response) => {
-            Onyx.merge(ONYXKEYS.SESSION, {authToken: response.authToken});
-        })
-        .catch((error) => {
-            Onyx.merge(ONYXKEYS.ACCOUNT, {error: error.message});
-        })
-        .finally(() => {
-            Onyx.merge(ONYXKEYS.ACCOUNT, {isLoading: false});
-        });
-}
+# Easily perform the same actions across exchanges & asset types
+stocks.interface.market_order('AAPL', 'buy', 1)
+crypto.interface.market_order('BTC-USD', 'buy', 1)
+# Full futures feature set
+futures.interface.get_hedge_mode()
 ```
 
-## Features
+### Backtest your trades, events, websockets, and custom data
 
-- Fetches financial data using OpenBB
-- Generates technical analysis summaries using AI
-- Provides stock price history, quantitative stats, and more
-- Calculates relative strength for stocks
-- Sentiment analysis on news articles
-- Universe scanning using FinViz filters
-- Risk management techniques using technically-derived stops and R Multiples
-- Interactive Streamlit UI for chat-based interaction
-- Multiple Agent Workflows using LangGraph
-- Deployment to AWS with the Copilot CLI
+```python
+import blankly
+"""
+This example shows how backtest over tweets
+"""
 
-## 🛠️ Installation
+class TwitterBot(blankly.Model):
+    def main(self, args):
+        while self.has_data:
+            self.backtester.value_account()
+            self.sleep('1h')
 
-In addition to the graphical start-up method based on VeighNa Station, you can also create run.py in any directory and write the following sample code:
+    def event(self, type_: str, data: str):
+        # Now check if it's a tweet about Tesla
+        if 'tsla' in data.lower() or 'gme' in data.lower():
+            # Buy, sell or evaluate your portfolio
+            pass
 
-```javascript
-// Bad
-validateAndSubmitForm() {
-    // validate...
-    this.setState({isLoading: true});
-    signIn()
-        .then((response) => {
-            if (result.jsonCode === 200) {
-                return;
-            }
 
-            this.setState({error: response.message});
-        })
-        .finally(() => {
-            this.setState({isLoading: false});
-        });
-}
+if __name__ == "__main__":
+    exchange = blankly.Alpaca()
+    model = TwitterBot(exchange)
 
-// Good
-validateAndSubmitForm() {
-    // validate...
-    signIn();
-}
+    # Add the tweets json here
+    model.backtester.add_custom_events(blankly.data.JsonEventReader('./tweets.json'))
+    # Now add some underlying prices at 1 month
+    model.backtester.add_prices('TSLA', '1h', start_date='3/20/22', stop_date='4/15/22')
+
+    # Backtest or run live
+    print(model.backtest(args=None, initial_values={'USD': 10000}))
+
 ```
 
-```mermaid
-erDiagram
-    PLUGIN {
-        string id
-        string name
-        string type
-    }
+**Check out alternative data examples [here](https://docs.blankly.finance/examples/model-framework)**
 
-    PLUGIN ||--o{ STRATEGY : implements
-    STRATEGY ||--o{ INDICATOR : uses
-    STRATEGY ||--o{ EXECUTOR : runs
-    EXECUTOR ||--o{ MARKET_INTERFACE : interacts
-    MARKET_INTERFACE }|--o{ EXCHANGE : connects
-    PLUGIN ||--o{ CONFIGURATION : requires
-    PLUGIN ||--o{ LOGGING : logs
+#### Accurate Backtest Holdings
+
+<div align="center">
+    <a><img src="https://firebasestorage.googleapis.com/v0/b/blankly-6ada5.appspot.com/o/github%2FScreen%20Shot%202022-04-17%20at%202.37.58%20PM.png?alt=media&token=d5738617-e197-4da2-850d-8fbbfda05275" style="border-radius:10px"></a>
+</div>
+
+
+### Go Live in One Line
+
+Seamlessly run your model live!
+
+```python
+# Just turn this
+strategy.backtest(to='1y')
+# Into this
+strategy.start()
 ```
 
+Dates, times, and scheduling adjust on the backend to make the experience instant.
+
+## Quickstart
+
+### Installation
+
+1. First install Blankly using `pip`. Blankly is hosted on [PyPi](https://pypi.org/project/Blankly/).
+
+```bash
+$ pip install blankly
+```
+
+2. Next, just run:
+```bash
+$ blankly init
+```
+This will initialize your working directory.
+
+The command will create the files `keys.json`, `settings.json`, `backtest.json`, `blankly.json` and an example script called `bot.py`.
+
+If you don't want to use our `init` command, you can find the same files in the `examples` folder under [`settings.json`](https://github.com/Blankly-Finance/Blankly/blob/main/examples/settings.json) and [`keys_example.json`](https://github.com/Blankly-Finance/Blankly/blob/main/examples/keys_example.json)
+
+3. From there, **insert your API keys** from your exchange into the generated `keys.json` file or take advantage of the CLI keys prompt.
+
+More information can be found on our [docs](https://docs.blankly.finance)
+
+### Directory format
+
+The working directory format should have *at least* these files:
+```
+project/
+   |-bot.py
+   |-keys.json
+   |-settings.json
+```
+
+#### Additional Info
+
+Make sure you're using a supported version of python. The module is currently tested on these versions:
+
+- Python 3.7
+- Python 3.8
+- Python 3.9
+- Python 3.10
+
+For more info, and ways to do more advanced things, check out our [getting started docs](https://docs.blankly.finance).
+
+## Supported Exchanges
+
+| Exchange            | Live Trading | Websockets | Paper Trading | Backtesting |
+| ------------------- |--------------| ---------- |--------------| ----------- |
+| Coinbase Pro        | 🟢           | 🟢          | 🟢           | 🟢           |
+| Binance             | 🟢           | 🟢          | 🟢           | 🟢           |
+| Alpaca              | 🟢           | 🟢          | 🟢           | 🟢           |
+| OANDA               | 🟢           |  | 🟢           | 🟢           |
+| FTX                 | 🟢           | 🟢          | 🟢           | 🟢           |
+| KuCoin              | 🟢           | 🟢        | 🟢           | 🟢           |
+| Binance Futures | 🟢 | 🟢 | 🟢 | 🟢 |
+| FTX Futures | 🟡 | 🟡 | 🟢 | 🟢 |
+| Okx | 🟢 | 🟢 | 🟢 | 🟢 |
+| Kraken              | 🟡           | 🟡          | 🟡           | 🟡           |
+| Keyless Backtesting |              |            |              | 🟢           |
+| TD Ameritrade       | 🔴           | 🔴          | 🔴           | 🔴           |
+| Webull              | 🔴           | 🔴          | 🔴           | 🔴           |
+| Robinhood           | 🔴           | 🔴          | 🔴           | 🔴           |
 
 
-<p align="center">
-    <img src="https://minkxx-spotify-readme.vercel.app/api?theme=dark&rainbow=true&scan=true&spin=True" alt="Preview">
-</p>
+🟢  = working
 
-<p align="center">
-  <img src="https://github.com/tarikmanoar/tarikmanoar/raw/output/github-snake-dark.svg" alt="snake"></center>
-</p>
+🟡  = in development, some or most features are working
 
-## Contributors
+🔴  = planned but not yet in development
 
- wouldn't be  without you. If we are going to disrupt financial industry, every contribution counts. Thank you for being part of this journey.
+## RSI Example
 
-<a href="https://github.com/Financial Chat-finance/Financial Chat/graphs/contributors">
-   <img src="https://contributors-img.web.app/image?repo=Financial Chat-finance/Financial Chat" width="800"/>
-</a>
+We have a pre-built cookbook examples that implement strategies such as RSI, MACD, and the Golden Cross found in our [examples](https://docs.blankly.finance/examples/golden-cross).
+
+Other Info
+
+### Subscribe to our news!
+https://blankly.substack.com/p/coming-soon
+
+### Bugs
+
+Please report any bugs or issues on the GitHub's Issues page.
+
+### Disclaimer 
+
+Trading is risky. We are not responsible for losses incurred using this software, software fitness for any particular purpose, or responsibility for any issues or bugs.
+This is free software.
+
+### Contributing
+
+If you would like to support the project, pull requests are welcome.
+
+### Licensing 
+
+**Blankly** is distributed under the [**LGPL License**](https://www.gnu.org/licenses/lgpl-3.0.en.html). See the [LICENSE](/LICENSE) for more details.
+
+New updates every day 💪.
+
+<div align="center">
+    <img src="https://firebasestorage.googleapis.com/v0/b/blankly-6ada5.appspot.com/o/github%2Fblanklybots.png?alt=media&token=005728b0-5f49-476d-968a-07fe0683ca09" style="border-radius:10px; width: 30%">
+</div>
+Art by DALL·E 2 - "Robots playfully trading stocks synthwave"
