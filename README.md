@@ -1,151 +1,194 @@
-# VeighNa - Financial Chat.
+[![Packagist][packagist-shield]][packagist-url]
+[![License][license-shield]][license-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Donate][donate-shield]][donate-url]
+
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+  <a href="https://firefly-iii.org/">
+    <img src="https://raw.githubusercontent.com/firefly-iii/firefly-iii/develop/.github/assets/img/logo-small.png" alt="Firefly III" width="120" height="178">
+  </a>
+</p>
+  <h1 align="center">Firefly III</h1>
+
+  <p align="center">
+    A free and open source personal finance manager
+    <br />
+    <a href="https://docs.firefly-iii.org/"><strong>Explore the documentation</strong></a>
+    <br />
+    <br />
+    <a href="https://demo.firefly-iii.org/">View the demo</a>
+    ·
+    <a href="https://github.com/firefly-iii/firefly-iii/issues">Report a bug</a>
+    ·
+    <a href="https://github.com/firefly-iii/firefly-iii/issues">Request a feature</a>
+    ·
+    <a href="https://github.com/firefly-iii/firefly-iii/discussions">Ask questions</a>
+  </p>
+
+<!-- MarkdownTOC autolink="true" -->
+
+- [About Firefly III](#about-firefly-iii)
+  - [Purpose](#purpose)
+- [Features](#features)
+- [Who's it for?](#whos-it-for)
+- [The Firefly III eco-system](#the-firefly-iii-eco-system)
+- [Getting Started](#getting-started)
+- [Contributing](#contributing)
+- [Support the development of Firefly III](#support-the-development-of-firefly-iii)
+- [License](#license)
+- [Do you need help, or do you want to get in touch?](#do-you-need-help-or-do-you-want-to-get-in-touch)
+- [Acknowledgements](#acknowledgements)
+
+<!-- /MarkdownTOC -->
+
+## About Firefly III
 
 <p align="center">
-  <img src ="https://raw.githubusercontent.com/Expensify/App/main/web/favicon.png"/>
+	<img src="https://raw.githubusercontent.com/firefly-iii/firefly-iii/develop/.github/assets/img/imac-complete.png" alt="Firefly III on iMac" />
 </p>
+
+"Firefly III" is a (self-hosted) manager for your personal finances. It can help you keep track of your expenses and income, so you can spend less and save more. Firefly III supports the use of budgets, categories and tags. Using a bunch of external tools, you can import data. It also has many neat financial reports available.
+
+Firefly III should give you **insight** into and **control** over your finances. Money should be useful, not scary. You should be able to *see* where it is going, to *feel* your expenses and to... wow, I'm going overboard with this aren't I?
+
+But you get the idea: this is your money. These are your expenses. Stop them from controlling you. I built this tool because I started to dislike money. Having money, not having money, paying bills with money, you get the idea. But no more. I want to feel "safe", whatever my balance is. And I hope this tool can help you. I know it helps me.
+
+### Purpose
 
 <p align="center">
-    <img src ="https://img.shields.io/badge/version-4.0.0-blueviolet.svg"/>
-    <img src ="https://img.shields.io/badge/platform-windows|linux|macos-yellow.svg"/>
-    <img src ="https://img.shields.io/badge/python-3.10|3.11|3.12|3.13-blue.svg" />
-    <img src ="https://img.shields.io/github/actions/workflow/status/vnpy/vnpy/pythonapp.yml?branch=master"/>
-    <img src ="https://img.shields.io/github/license/vnpy/vnpy.svg?color=orange"/>
+  <img src="https://raw.githubusercontent.com/firefly-iii/firefly-iii/develop/.github/assets/img/ipad-complete.png" alt="Firefly III on iPad" width="600">
 </p>
 
+Personal financial management is pretty difficult, and everybody has their own approach to it. Some people make budgets, other people limit their cashflow by throwing away their credit cards, others try to increase their current cashflow. There are tons of ways to save and earn money. Firefly III works on the principle that if you know where your money is going, you can stop it from going there.
 
-## Why vnpy Plugins?
-VeighNa is a Python-based open source quantitative trading system development framework that has grown step by step into a fully-featured quantitative trading platform with continuous contributions from the open source community. It currently has many users from domestic and international financial institutions, including hedge funds, investment banks, futures brokers, university research institutions, proprietary trading companies, etc. **The VeighNa Elite Quantitative Terminal for professional traders has been officially released, providing comprehensive support for professional traders' needs in areas such as massive strategy concurrency, intelligent position rolling, algorithmic order execution, multi-account trading support, and more. For more detailed information, please scan the QR code below and follow the account, then click on the menu bar's [Community Exchange -> Elite Member Services]**
+By keeping track of your expenses and your income you can budget accordingly and save money. Stop living from paycheck to paycheck but give yourself the financial wiggle room you need.
 
-They are:
-- 🔌 Modular & reusable components
-- 📦 Environment-agnostic (backtest, sandbox, live)
-- 🧩 Easy to plug into any strategy or workflow
-- 🌐 Exchange-agnostic with unified interfaces
-
-Create, share, or combine plugins for indicators, strategies, risk controls, and more — all while keeping your code clean and scalable.
-
-![image](https://github.com/user-attachments/assets/3c9e3e92-9255-414b-ac62-d0e3cdabff40)
-
-## AI-Powered
-
-On the tenth anniversary of VeighNa's release, version 4.0 officially introduces the module targeting AI quantitative strategies, providing professional quantitative traders with **an all-in-one multi-factor machine learning (ML) strategy development, research, and live trading solution**:
-
-## vnpy Workspace
-
-While the vnpy Platform is all about an integration to dozens of different data vendors, the interface is either Python or a CLI.
-
-If you want an enterprise UI to visualize this datasets and use AI agents on top, you can find vnpy Workspace at.
-
-* :bar_chart: **dataset**: Factor Feature Engineering
-
-    * Designed specifically for ML algorithm training optimization, supporting efficient batch feature calculation and processing
-    * Built-in rich factor feature expression calculation engine, enabling rapid one-click generation of training data
-    * Alpha 158: A collection of stock market features from Microsoft's Qlib project, covering multiple dimensions of quantitative factors including K-line patterns, price trends, and time-series volatility
-
-* :bulb: **model**: Prediction Model Training
-
-    * Provides standardized ML model development templates, greatly simplifying model building and training processes
-    * Unified API interface design, supporting seamless switching between different algorithms for performance comparison testing
-    * Integrates multiple mainstream machine learning algorithms:
-        * Lasso]: Classic Lasso regression model, implementing feature selection through L1 regularization
-        * LightGBM: Efficient gradient boosting decision tree with a training engine optimized for large-scale datasets
-        * MLP: Multi-layer perceptron neural network, suitable for modeling complex non-linear relationships
-
-
-
-```js
-function signIn(password, twoFactorAuthCode) {
-    Onyx.merge(ONYXKEYS.ACCOUNT, {isLoading: true});
-    Authentication.Authenticate({
-        ...defaultParams,
-        password,
-        twoFactorAuthCode,
-    })
-        .then((response) => {
-            Onyx.merge(ONYXKEYS.SESSION, {authToken: response.authToken});
-        })
-        .catch((error) => {
-            Onyx.merge(ONYXKEYS.ACCOUNT, {error: error.message});
-        })
-        .finally(() => {
-            Onyx.merge(ONYXKEYS.ACCOUNT, {isLoading: false});
-        });
-}
-```
+You can read more about the purpose of Firefly III in the [documentation](https://docs.firefly-iii.org/).
 
 ## Features
 
-- Fetches financial data using OpenBB
-- Generates technical analysis summaries using AI
-- Provides stock price history, quantitative stats, and more
-- Calculates relative strength for stocks
-- Sentiment analysis on news articles
-- Universe scanning using FinViz filters
-- Risk management techniques using technically-derived stops and R Multiples
-- Interactive Streamlit UI for chat-based interaction
-- Multiple Agent Workflows using LangGraph
-- Deployment to AWS with the Copilot CLI
+Firefly III is pretty feature packed. Some important stuff first:
 
-## 🛠️ Installation
+* It is completely self-hosted and isolated, and will never contact external servers until you explicitly tell it to.
+* It features a REST JSON API that covers almost every part of Firefly III.
 
-In addition to the graphical start-up method based on VeighNa Station, you can also create run.py in any directory and write the following sample code:
+The most exciting features are:
 
-```javascript
-// Bad
-validateAndSubmitForm() {
-    // validate...
-    this.setState({isLoading: true});
-    signIn()
-        .then((response) => {
-            if (result.jsonCode === 200) {
-                return;
-            }
+* Create [recurring transactions to manage your money](https://docs.firefly-iii.org/explanation/financial-concepts/recurring/).
+* [Rule based transaction handling](https://docs.firefly-iii.org/how-to/firefly-iii/features/rules/) with the ability to create your own rules.
 
-            this.setState({error: response.message});
-        })
-        .finally(() => {
-            this.setState({isLoading: false});
-        });
-}
+Then the things that make you go "yeah OK, makes sense".
 
-// Good
-validateAndSubmitForm() {
-    // validate...
-    signIn();
-}
-```
+* A [double-entry](https://en.wikipedia.org/wiki/Double-entry_bookkeeping_system) bookkeeping system.
+* Save towards a goal using [piggy banks](https://docs.firefly-iii.org/explanation/financial-concepts/piggy-banks/).
+* View [income and expense reports](https://docs.firefly-iii.org/how-to/firefly-iii/finances/reports/).
 
-```mermaid
-erDiagram
-    PLUGIN {
-        string id
-        string name
-        string type
-    }
+And the things you would hope for but not expect:
 
-    PLUGIN ||--o{ STRATEGY : implements
-    STRATEGY ||--o{ INDICATOR : uses
-    STRATEGY ||--o{ EXECUTOR : runs
-    EXECUTOR ||--o{ MARKET_INTERFACE : interacts
-    MARKET_INTERFACE }|--o{ EXCHANGE : connects
-    PLUGIN ||--o{ CONFIGURATION : requires
-    PLUGIN ||--o{ LOGGING : logs
-```
+* 2 factor authentication for extra security 🔒.
+* Supports [any currency you want](https://docs.firefly-iii.org/how-to/firefly-iii/features/currencies/).
+* There is a [Docker image](https://docs.firefly-iii.org/how-to/firefly-iii/installation/docker/).
+
+And to organise everything:
+
+* Clear views that should show you how you're doing.
+* Easy navigation through your records.
+* Lots of charts because we all love them.
+
+Many more features are listed in the [documentation](https://docs.firefly-iii.org/explanation/firefly-iii/about/introduction/).
+
+## Who's it for?
+<img src="https://raw.githubusercontent.com/firefly-iii/firefly-iii/develop/.github/assets/img/iphone-complete.png" alt="Firefly III on iPhone" align="left" width="250">
+
+ This application is for people who want to track their finances, keep an eye on their money **without having to upload their financial records to the cloud**. You're a bit tech-savvy, you like open source software and you don't mind tinkering with (self-hosted) servers.
+ 
+ <br clear="left"/>
+
+## The Firefly III eco-system
+
+Several users have built pretty awesome stuff around the Firefly III API. [Check out these tools in the documentation](https://docs.firefly-iii.org/references/firefly-iii/third-parties/apps/).
+
+## Getting Started
+
+There are many ways to run Firefly III
+1. There is a [demo site](https://demo.firefly-iii.org) with an example financial administration already present.
+2. You can [install it on your server](https://docs.firefly-iii.org/how-to/firefly-iii/installation/self-managed/).
+3. You can [run it using Docker](https://docs.firefly-iii.org/how-to/firefly-iii/installation/docker/).
+4. You can [deploy via Kubernetes](https://firefly-iii.github.io/kubernetes/).
+5. You can [install it using Softaculous](https://www.softaculous.com/softaculous/apps/others/Firefly_III).
+6. You can [install it using AMPPS](https://www.ampps.com/).
+7. You can [install it on Cloudron](https://cloudron.io/store/org.fireflyiii.cloudronapp.html).
+8. You can [install it on Lando](https://gist.github.com/ArtisKrumins/ccb24f31d6d4872b57e7c9343a9d1bf0).
+9. You can [install it on Yunohost](https://github.com/YunoHost-Apps/firefly-iii).
+
+## Contributing
+
+You can contact me at [james@firefly-iii.org](mailto:james@firefly-iii.org), you may open an issue in the [main repository](https://github.com/firefly-iii/firefly-iii) or contact me through [gitter](https://gitter.im/firefly-iii/firefly-iii) and [Mastodon](https://fosstodon.org/@ff3).
+
+Of course, there are some [contributing guidelines](https://docs.firefly-iii.org/explanation/support/#contributing-code) and a [code of conduct](https://github.com/firefly-iii/firefly-iii/blob/main/.github/code_of_conduct.md), which I invite you to check out.
+
+I can always use your help [squashing bugs](https://docs.firefly-iii.org/explanation/support/), thinking about [new features](https://docs.firefly-iii.org/explanation/support/) or [translating Firefly III](https://docs.firefly-iii.org/how-to/firefly-iii/development/translations/) into other languages.
+
+[Sonarcloud][sc-project-url] scans the code of Firefly III. If you want to help improve Firefly III, check out the latest reports and take your pick!
+
+[![Quality Gate Status][sc-gate-shield]][sc-project-url] [![Bugs][sc-bugs-shield]][sc-project-url] [![Code Smells][sc-smells-shield]][sc-project-url] [![Vulnerabilities][sc-vuln-shield]][sc-project-url]
+
+There is also a [security policy](https://github.com/firefly-iii/firefly-iii/security/policy).
+
+[![CII Best Practices][bp-badge]][bp-url]
+
+<!-- SPONSOR TEXT -->
+
+## Support the development of Firefly III
+
+If you like Firefly III and if it helps you save lots of money, why not send me a dime for every dollar saved! 🥳
+
+OK that was a joke. If you feel Firefly III made your life better, please consider contributing as a sponsor. Please check out my [Patreon](https://www.patreon.com/jc5) and [GitHub Sponsors](https://github.com/sponsors/JC5) page for more information. You can also [buy me a ☕️ coffee at ko-fi.com](https://ko-fi.com/Q5Q5R4SH1). Thank you for your consideration.
+
+<!-- END OF SPONSOR TEXT -->
+
+## License
+
+This work [is licensed](https://github.com/firefly-iii/firefly-iii/blob/main/LICENSE) under the [GNU Affero General Public License v3](https://www.gnu.org/licenses/agpl-3.0.html).
+
+<!-- HELP TEXT -->
+
+## Do you need help, or do you want to get in touch?
+
+Do you want to contact me? You can email me at [james@firefly-iii.org](mailto:james@firefly-iii.org) or get in touch through one of the following support channels:
+
+- [GitHub Discussions](https://github.com/firefly-iii/firefly-iii/discussions/) for questions and support
+- [Gitter.im](https://gitter.im/firefly-iii/firefly-iii) for a good chat and a quick answer
+- [GitHub Issues](https://github.com/firefly-iii/firefly-iii/issues) for bugs and issues
+- <a rel="me" href="https://fosstodon.org/@ff3">Mastodon</a> for news and updates
+
+<!-- END OF HELP TEXT -->
 
 
+## Acknowledgements
 
-<p align="center">
-    <img src="https://minkxx-spotify-readme.vercel.app/api?theme=dark&rainbow=true&scan=true&spin=True" alt="Preview">
-</p>
+Over time, [many people have contributed to Firefly III](https://github.com/firefly-iii/firefly-iii/graphs/contributors). I'm grateful for their support and code contributions.
 
-<p align="center">
-  <img src="https://github.com/tarikmanoar/tarikmanoar/raw/output/github-snake-dark.svg" alt="snake"></center>
-</p>
+The Firefly III logo is made by the excellent Cherie Woo.
 
-## Contributors
+<a href="https://hellogithub.com/repository/a8c64f04cb3643c2a4423c4ad924dec9" target="_blank"><img src="https://abroad.hellogithub.com/v1/widgets/recommend.svg?rid=a8c64f04cb3643c2a4423c4ad924dec9&claim_uid=1bPi7O2rTGREZXN&theme=small" alt="Featured｜HelloGitHub" /></a>
 
- wouldn't be  without you. If we are going to disrupt financial industry, every contribution counts. Thank you for being part of this journey.
-
-<a href="https://github.com/vnpy-finance/vnpy/graphs/contributors">
-   <img src="https://contributors-img.web.app/image?repo=vnpy-finance/vnpy" width="800"/>
-</a>
+[packagist-shield]: https://img.shields.io/packagist/v/grumpydictator/firefly-iii.svg?style=flat-square
+[packagist-url]: https://packagist.org/packages/grumpydictator/firefly-iii
+[license-shield]: https://img.shields.io/github/license/firefly-iii/firefly-iii.svg?style=flat-square
+[license-url]: https://www.gnu.org/licenses/agpl-3.0.html
+[stars-shield]: https://img.shields.io/github/stars/firefly-iii/firefly-iii.svg?style=flat-square
+[stars-url]: https://github.com/firefly-iii/firefly-iii/stargazers
+[donate-shield]: https://img.shields.io/badge/donate-%24%20%E2%82%AC-brightgreen?style=flat-square
+[donate-url]: #support-the-development-of-firefly-iii
+[build-shield]: https://api.travis-ci.com/firefly-iii/firefly-iii.svg?branch=master
+[build-url]: https://travis-ci.com/github/firefly-iii/firefly-iii
+[sc-gate-shield]: https://sonarcloud.io/api/project_badges/measure?project=firefly-iii_firefly-iii&metric=alert_status
+[sc-bugs-shield]: https://sonarcloud.io/api/project_badges/measure?project=firefly-iii_firefly-iii&metric=bugs
+[sc-smells-shield]: https://sonarcloud.io/api/project_badges/measure?project=firefly-iii_firefly-iii&metric=code_smells
+[sc-vuln-shield]: https://sonarcloud.io/api/project_badges/measure?project=firefly-iii_firefly-iii&metric=vulnerabilities
+[sc-project-url]: https://sonarcloud.io/dashboard?id=firefly-iii_firefly-iii
+[bp-badge]: https://bestpractices.coreinfrastructure.org/projects/6335/badge
+[bp-url]: https://bestpractices.coreinfrastructure.org/projects/6335 
