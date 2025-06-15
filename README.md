@@ -1,9 +1,5 @@
-[![Packagist][packagist-shield]][packagist-url]
-[![License][license-shield]][license-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Donate][donate-shield]][donate-url]
+<br />
 
-<!-- PROJECT LOGO -->
 <br />
 <p align="center">
   <a href="https://firefly-iii.org/">
@@ -12,42 +8,38 @@
 </p>
   <h1 align="center">Firefly III</h1>
 
-  <p align="center">
-    A free and open source personal finance manager
-    <br />
-    <a href="https://docs.firefly-iii.org/"><strong>Explore the documentation</strong></a>
-    <br />
-    <br />
-    <a href="https://demo.firefly-iii.org/">View the demo</a>
-    ·
-    <a href="https://github.com/firefly-iii/firefly-iii/issues">Report a bug</a>
-    ·
-    <a href="https://github.com/firefly-iii/firefly-iii/issues">Request a feature</a>
-    ·
-    <a href="https://github.com/firefly-iii/firefly-iii/discussions">Ask questions</a>
-  </p>
+[![Discord Shield](https://img.shields.io/discord/831165782750789672)](https://discord.com/invite/xPHTuHCmuV)
+[![Open in Dev Containers](https://img.shields.io/static/v1?label=Dev%20Containers&message=Open&color=blue&logo=visualstudiocode)](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/OpenBB-finance/OpenBB)
+<a href="https://codespaces.new/OpenBB-finance/OpenBB">
+  <img src="https://github.com/codespaces/badge.svg" height="20" />
+</a>
+<a target="_blank" href="https://colab.research.google.com/github/OpenBB-finance/OpenBB/blob/develop/examples/googleColab.ipynb">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
+</a>
+[![PyPI](https://img.shields.io/pypi/v/openbb?color=blue&label=PyPI%20Package)](https://pypi.org/project/openbb/)
 
-<!-- MarkdownTOC autolink="true" -->
 
-- [About Firefly III](#about-firefly-iii)
-  - [Purpose](#purpose)
-- [Features](#features)
-- [Who's it for?](#whos-it-for)
-- [The Firefly III eco-system](#the-firefly-iii-eco-system)
-- [Getting Started](#getting-started)
-- [Contributing](#contributing)
-- [Support the development of Firefly III](#support-the-development-of-firefly-iii)
-- [License](#license)
-- [Do you need help, or do you want to get in touch?](#do-you-need-help-or-do-you-want-to-get-in-touch)
-- [Acknowledgements](#acknowledgements)
-
-<!-- /MarkdownTOC -->
-
-## About Firefly III
+## Why Firefly Plugins?
+Firefly Plugins let you **build once, use anywhere** across backtests, paper trading, and live markets.
 
 <p align="center">
 	<img src="https://raw.githubusercontent.com/firefly-iii/firefly-iii/develop/.github/assets/img/imac-complete.png" alt="Firefly III on iMac" />
 </p>
+
+They are:
+- 🔌 Modular & reusable components
+- 📦 Environment-agnostic (backtest, sandbox, live)
+- 🧩 Easy to plug into any strategy or workflow
+- 🌐 Exchange-agnostic with unified interfaces
+
+Create, share, or combine plugins for indicators, strategies, risk controls, and more — all while keeping your code clean and scalable.
+
+## Features
+
+* Import from over 6000 banks
+* Import over the command line for easy automation
+* Import over an API for easy automation
+* Use rules and data mapping for transaction clarity
 
 "Firefly III" is a (self-hosted) manager for your personal finances. It can help you keep track of your expenses and income, so you can spend less and save more. Firefly III supports the use of budgets, categories and tags. Using a bunch of external tools, you can import data. It also has many neat financial reports available.
 
@@ -55,140 +47,188 @@ Firefly III should give you **insight** into and **control** over your finances.
 
 But you get the idea: this is your money. These are your expenses. Stop them from controlling you. I built this tool because I started to dislike money. Having money, not having money, paying bills with money, you get the idea. But no more. I want to feel "safe", whatever my balance is. And I hope this tool can help you. I know it helps me.
 
-### Purpose
-
 <p align="center">
   <img src="https://raw.githubusercontent.com/firefly-iii/firefly-iii/develop/.github/assets/img/ipad-complete.png" alt="Firefly III on iPad" width="600">
 </p>
 
-Personal financial management is pretty difficult, and everybody has their own approach to it. Some people make budgets, other people limit their cashflow by throwing away their credit cards, others try to increase their current cashflow. There are tons of ways to save and earn money. Firefly III works on the principle that if you know where your money is going, you can stop it from going there.
+### Trade Stocks, Crypto, Futures, and Forex
 
-By keeping track of your expenses and your income you can budget accordingly and save money. Stop living from paycheck to paycheck but give yourself the financial wiggle room you need.
+```python
+from Firefly import Alpaca, CoinbasePro
 
-You can read more about the purpose of Firefly III in the [documentation](https://docs.firefly-iii.org/).
+stocks = Alpaca()
+crypto = CoinbasePro()
+futures = BinanceFutures()
 
-## Features
+# Easily perform the same actions across exchanges & asset types
+stocks.interface.market_order('AAPL', 'buy', 1)
+crypto.interface.market_order('BTC-USD', 'buy', 1)
+# Full futures feature set
+futures.interface.get_hedge_mode()
+```
 
-Firefly III is pretty feature packed. Some important stuff first:
+### Backtest your trades, events, websockets, and custom data
 
-* It is completely self-hosted and isolated, and will never contact external servers until you explicitly tell it to.
-* It features a REST JSON API that covers almost every part of Firefly III.
+```python
+import Firefly
+"""
+This example shows how backtest over tweets
+"""
 
-The most exciting features are:
+class TwitterBot(Firefly.Model):
+    def main(self, args):
+        while self.has_data:
+            self.backtester.value_account()
+            self.sleep('1h')
 
-* Create [recurring transactions to manage your money](https://docs.firefly-iii.org/explanation/financial-concepts/recurring/).
-* [Rule based transaction handling](https://docs.firefly-iii.org/how-to/firefly-iii/features/rules/) with the ability to create your own rules.
-
-Then the things that make you go "yeah OK, makes sense".
-
-* A [double-entry](https://en.wikipedia.org/wiki/Double-entry_bookkeeping_system) bookkeeping system.
-* Save towards a goal using [piggy banks](https://docs.firefly-iii.org/explanation/financial-concepts/piggy-banks/).
-* View [income and expense reports](https://docs.firefly-iii.org/how-to/firefly-iii/finances/reports/).
-
-And the things you would hope for but not expect:
-
-* 2 factor authentication for extra security 🔒.
-* Supports [any currency you want](https://docs.firefly-iii.org/how-to/firefly-iii/features/currencies/).
-* There is a [Docker image](https://docs.firefly-iii.org/how-to/firefly-iii/installation/docker/).
-
-And to organise everything:
-
-* Clear views that should show you how you're doing.
-* Easy navigation through your records.
-* Lots of charts because we all love them.
-
-Many more features are listed in the [documentation](https://docs.firefly-iii.org/explanation/firefly-iii/about/introduction/).
-
-## Who's it for?
-<img src="https://raw.githubusercontent.com/firefly-iii/firefly-iii/develop/.github/assets/img/iphone-complete.png" alt="Firefly III on iPhone" align="left" width="250">
-
- This application is for people who want to track their finances, keep an eye on their money **without having to upload their financial records to the cloud**. You're a bit tech-savvy, you like open source software and you don't mind tinkering with (self-hosted) servers.
- 
- <br clear="left"/>
-
-## The Firefly III eco-system
-
-Several users have built pretty awesome stuff around the Firefly III API. [Check out these tools in the documentation](https://docs.firefly-iii.org/references/firefly-iii/third-parties/apps/).
-
-## Getting Started
-
-There are many ways to run Firefly III
-1. There is a [demo site](https://demo.firefly-iii.org) with an example financial administration already present.
-2. You can [install it on your server](https://docs.firefly-iii.org/how-to/firefly-iii/installation/self-managed/).
-3. You can [run it using Docker](https://docs.firefly-iii.org/how-to/firefly-iii/installation/docker/).
-4. You can [deploy via Kubernetes](https://firefly-iii.github.io/kubernetes/).
-5. You can [install it using Softaculous](https://www.softaculous.com/softaculous/apps/others/Firefly_III).
-6. You can [install it using AMPPS](https://www.ampps.com/).
-7. You can [install it on Cloudron](https://cloudron.io/store/org.fireflyiii.cloudronapp.html).
-8. You can [install it on Lando](https://gist.github.com/ArtisKrumins/ccb24f31d6d4872b57e7c9343a9d1bf0).
-9. You can [install it on Yunohost](https://github.com/YunoHost-Apps/firefly-iii).
-
-## Contributing
-
-You can contact me at [james@firefly-iii.org](mailto:james@firefly-iii.org), you may open an issue in the [main repository](https://github.com/firefly-iii/firefly-iii) or contact me through [gitter](https://gitter.im/firefly-iii/firefly-iii) and [Mastodon](https://fosstodon.org/@ff3).
-
-Of course, there are some [contributing guidelines](https://docs.firefly-iii.org/explanation/support/#contributing-code) and a [code of conduct](https://github.com/firefly-iii/firefly-iii/blob/main/.github/code_of_conduct.md), which I invite you to check out.
-
-I can always use your help [squashing bugs](https://docs.firefly-iii.org/explanation/support/), thinking about [new features](https://docs.firefly-iii.org/explanation/support/) or [translating Firefly III](https://docs.firefly-iii.org/how-to/firefly-iii/development/translations/) into other languages.
-
-[Sonarcloud][sc-project-url] scans the code of Firefly III. If you want to help improve Firefly III, check out the latest reports and take your pick!
-
-[![Quality Gate Status][sc-gate-shield]][sc-project-url] [![Bugs][sc-bugs-shield]][sc-project-url] [![Code Smells][sc-smells-shield]][sc-project-url] [![Vulnerabilities][sc-vuln-shield]][sc-project-url]
-
-There is also a [security policy](https://github.com/firefly-iii/firefly-iii/security/policy).
-
-[![CII Best Practices][bp-badge]][bp-url]
-
-<!-- SPONSOR TEXT -->
-
-## Support the development of Firefly III
-
-If you like Firefly III and if it helps you save lots of money, why not send me a dime for every dollar saved! 🥳
-
-OK that was a joke. If you feel Firefly III made your life better, please consider contributing as a sponsor. Please check out my [Patreon](https://www.patreon.com/jc5) and [GitHub Sponsors](https://github.com/sponsors/JC5) page for more information. You can also [buy me a ☕️ coffee at ko-fi.com](https://ko-fi.com/Q5Q5R4SH1). Thank you for your consideration.
-
-<!-- END OF SPONSOR TEXT -->
-
-## License
-
-This work [is licensed](https://github.com/firefly-iii/firefly-iii/blob/main/LICENSE) under the [GNU Affero General Public License v3](https://www.gnu.org/licenses/agpl-3.0.html).
-
-<!-- HELP TEXT -->
-
-## Do you need help, or do you want to get in touch?
-
-Do you want to contact me? You can email me at [james@firefly-iii.org](mailto:james@firefly-iii.org) or get in touch through one of the following support channels:
-
-- [GitHub Discussions](https://github.com/firefly-iii/firefly-iii/discussions/) for questions and support
-- [Gitter.im](https://gitter.im/firefly-iii/firefly-iii) for a good chat and a quick answer
-- [GitHub Issues](https://github.com/firefly-iii/firefly-iii/issues) for bugs and issues
-- <a rel="me" href="https://fosstodon.org/@ff3">Mastodon</a> for news and updates
-
-<!-- END OF HELP TEXT -->
+    def event(self, type_: str, data: str):
+        # Now check if it's a tweet about Tesla
+        if 'tsla' in data.lower() or 'gme' in data.lower():
+            # Buy, sell or evaluate your portfolio
+            pass
 
 
-## Acknowledgements
+if __name__ == "__main__":
+    exchange = Firefly.Alpaca()
+    model = TwitterBot(exchange)
 
-Over time, [many people have contributed to Firefly III](https://github.com/firefly-iii/firefly-iii/graphs/contributors). I'm grateful for their support and code contributions.
+    # Add the tweets json here
+    model.backtester.add_custom_events(Firefly.data.JsonEventReader('./tweets.json'))
+    # Now add some underlying prices at 1 month
+    model.backtester.add_prices('TSLA', '1h', start_date='3/20/22', stop_date='4/15/22')
 
-The Firefly III logo is made by the excellent Cherie Woo.
+    # Backtest or run live
+    print(model.backtest(args=None, initial_values={'USD': 10000}))
 
-<a href="https://hellogithub.com/repository/a8c64f04cb3643c2a4423c4ad924dec9" target="_blank"><img src="https://abroad.hellogithub.com/v1/widgets/recommend.svg?rid=a8c64f04cb3643c2a4423c4ad924dec9&claim_uid=1bPi7O2rTGREZXN&theme=small" alt="Featured｜HelloGitHub" /></a>
+```
 
-[packagist-shield]: https://img.shields.io/packagist/v/grumpydictator/firefly-iii.svg?style=flat-square
-[packagist-url]: https://packagist.org/packages/grumpydictator/firefly-iii
-[license-shield]: https://img.shields.io/github/license/firefly-iii/firefly-iii.svg?style=flat-square
-[license-url]: https://www.gnu.org/licenses/agpl-3.0.html
-[stars-shield]: https://img.shields.io/github/stars/firefly-iii/firefly-iii.svg?style=flat-square
-[stars-url]: https://github.com/firefly-iii/firefly-iii/stargazers
-[donate-shield]: https://img.shields.io/badge/donate-%24%20%E2%82%AC-brightgreen?style=flat-square
-[donate-url]: #support-the-development-of-firefly-iii
-[build-shield]: https://api.travis-ci.com/firefly-iii/firefly-iii.svg?branch=master
-[build-url]: https://travis-ci.com/github/firefly-iii/firefly-iii
-[sc-gate-shield]: https://sonarcloud.io/api/project_badges/measure?project=firefly-iii_firefly-iii&metric=alert_status
-[sc-bugs-shield]: https://sonarcloud.io/api/project_badges/measure?project=firefly-iii_firefly-iii&metric=bugs
-[sc-smells-shield]: https://sonarcloud.io/api/project_badges/measure?project=firefly-iii_firefly-iii&metric=code_smells
-[sc-vuln-shield]: https://sonarcloud.io/api/project_badges/measure?project=firefly-iii_firefly-iii&metric=vulnerabilities
-[sc-project-url]: https://sonarcloud.io/dashboard?id=firefly-iii_firefly-iii
-[bp-badge]: https://bestpractices.coreinfrastructure.org/projects/6335/badge
-[bp-url]: https://bestpractices.coreinfrastructure.org/projects/6335 
+#### Accurate Backtest Holdings
+
+<div align="center">
+    <a><img src="https://firebasestorage.googleapis.com/v0/b/Firefly-6ada5.appspot.com/o/github%2FScreen%20Shot%202022-04-17%20at%202.37.58%20PM.png?alt=media&token=d5738617-e197-4da2-850d-8fbbfda05275" style="border-radius:10px"></a>
+</div>
+
+
+## 🛠️ Installation
+
+Follow the steps below to install and run this project on your local machine.
+
+### 1. 📦 Prerequisites
+
+Make sure you have the following tools installed on your system:
+
+- [Node.js](https://nodejs.org/)  (v14.x or newer)
+- [npm](https://www.npmjs.com/)  (comes with Node.js)
+- [Git](https://git-scm.com/) 
+- Python 3.x (optional, if any indicators or tools require it)
+
+> You can also use Docker to run the project in an isolated environment.
+
+### 3. 📦 Install Dependencies
+
+Install the required npm packages:
+
+```bash
+npm install
+```
+
+If the plugin uses Python-based tools or indicators, install the Python dependencies as well:
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+### 4. 🔐 Set Up Exchange API Keys
+
+To allow the plugin to interact with cryptocurrency exchanges, set up your API credentials.
+
+Create a `.env` file in the root directory and add your exchange keys:
+
+```env
+EXCHANGE_API_KEY=your_api_key_here
+EXCHANGE_SECRET_KEY=your_secret_key_here
+```
+
+> Make sure not to commit this file to version control. It should remain private.
+
+---
+
+### 5. ⚙️ Configure the Plugin
+
+Each plugin comes with a configuration file. For example:
+
+```yaml
+# config/rsi-config.yaml
+strategy:
+  rsi_period: 14
+  overbought_threshold: 70
+  oversold_threshold: 30
+  symbol: BTC/USDT
+  interval: "1h"
+```
+
+You can modify these values based on your trading preferences.
+
+---
+
+### 6. ▶️ Run the Plugin
+
+Once everything is set up, start the plugin:
+
+```bash
+npm start -- --plugin rsi --config config/rsi-config.yaml
+```
+
+Or, if you're using a custom script:
+
+```bash
+node index.js --plugin rsi --config config/rsi-config.yaml
+```
+
+---
+
+### 7. 🐳 Optional: Run with Docker
+
+Build and run the plugin using Docker:
+
+```bash
+docker build -t Firefly-rsi-plugin .
+docker run -it --env-file .env Firefly-rsi-plugin
+```
+
+```mermaid
+erDiagram
+    PLUGIN {
+        string id
+        string name
+        string type
+    }
+
+    PLUGIN ||--o{ STRATEGY : implements
+    STRATEGY ||--o{ INDICATOR : uses
+    STRATEGY ||--o{ EXECUTOR : runs
+    EXECUTOR ||--o{ MARKET_INTERFACE : interacts
+    MARKET_INTERFACE }|--o{ EXCHANGE : connects
+    PLUGIN ||--o{ CONFIGURATION : requires
+    PLUGIN ||--o{ LOGGING : logs
+```
+
+
+
+<p align="center">
+    <img src="https://minkxx-spotify-readme.vercel.app/api?theme=dark&rainbow=true&scan=true&spin=True" alt="Preview">
+</p>
+
+<p align="center">
+  <img src="https://github.com/tarikmanoar/tarikmanoar/raw/output/github-snake-dark.svg" alt="snake"></center>
+</p>
+
+## Contributors
+
+ wouldn't be  without you. If we are going to disrupt financial industry, every contribution counts. Thank you for being part of this journey.
+
+<a href="https://github.com/OpenBB-finance/OpenBB/graphs/contributors">
+   <img src="https://contributors-img.web.app/image?repo=OpenBB-finance/OpenBB" width="800"/>
+</a>
