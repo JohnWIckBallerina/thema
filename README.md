@@ -1,21 +1,77 @@
-# financial-chat
+# VeighNa - Financial Chat.
 
-A financial chat application powered by [LangChain](https://www.langchain.com/), [LangGraph](https://langchain-ai.github.io/langgraph), [OpenBB](https://openbb.co/products/platform), [Claude 3 Opus](https://www.anthropic.com/claude), and [Streamlit](https://streamlit.io).
+<p align="center">
+  <img src ="https://raw.githubusercontent.com/Expensify/App/main/web/favicon.png"/>
+</p>
 
-## Blog Articles
+<p align="center">
+    <img src ="https://img.shields.io/badge/version-4.0.0-blueviolet.svg"/>
+    <img src ="https://img.shields.io/badge/platform-windows|linux|macos-yellow.svg"/>
+    <img src ="https://img.shields.io/badge/python-3.10|3.11|3.12|3.13-blue.svg" />
+    <img src ="https://img.shields.io/github/actions/workflow/status/vnpy/vnpy/pythonapp.yml?branch=master"/>
+    <img src ="https://img.shields.io/github/license/vnpy/vnpy.svg?color=orange"/>
+</p>
 
-If you're curious about the journey of building this project, check out these blog articles:
 
-- [Building an Agentic Stock Analysis Tool with LangChain, OpenBB, and Claude 3 Opus](https://sethhobson.com/2024/03/building-an-agentic-stock-analysis-tool-with-langchain-openbb-and-claude-3-opus)
-- [Expanding the AI Stock Analysis Agent with Fundamental and Technical Tools](https://sethhobson.com/2024/04/expanding-the-ai-stock-analysis-agent-with-fundamental-and-technical-tools)
-- [Improving the Edge: Trendlines, Sectors, and Sentiment](https://sethhobson.com/2024/04/improving-the-edge-trendlines-sectors-and-sentiment)
-- [Unlocking Alpha: Harnessing Relative Strength for AI-Driven Stock Selection](https://sethhobson.com/2024/04/unlocking-alpha-harnessing-relative-strength-for-ai-driven-stock-selection)
-- [Seeing the Bigger Picture: Adding Chart-Based Technical Analysis](https://sethhobson.com/2024/04/seeing-the-bigger-picture-adding-chart-based-technical-analysis)
-- [Empowering the AI Stock Analysis Agent with Universe Scanning](https://sethhobson.com/2024/04/empowering-the-ai-stock-analysis-agent-with-universe-scanning)
-- [Risk Management in AI Stock Trading: A Key to Success](https://sethhobson.com/2024/05/risk-management-in-ai-stock-trading-a-key-to-success)
-- [Converting the AI Stock AgentExecutor to LangGraph](https://sethhobson.com/2024/05/converting-ai-stock-agentexecutor-to-langgraph)
-- [Unleashing the Power of Multiple Agents with LangGraph](https://sethhobson.com/2024/05/unleashing-the-power-of-multiple-agents-with-langgraph)
-- [Deploying the AI Stock Analysis Agent on AWS with Copilot](https://sethhobson.com/2024/06/deploying-the-ai-stock-analysis-agent-on-aws-with-copilot)
+## Why vnpy Plugins?
+VeighNa is a Python-based open source quantitative trading system development framework that has grown step by step into a fully-featured quantitative trading platform with continuous contributions from the open source community. It currently has many users from domestic and international financial institutions, including hedge funds, investment banks, futures brokers, university research institutions, proprietary trading companies, etc. **The VeighNa Elite Quantitative Terminal for professional traders has been officially released, providing comprehensive support for professional traders' needs in areas such as massive strategy concurrency, intelligent position rolling, algorithmic order execution, multi-account trading support, and more. For more detailed information, please scan the QR code below and follow the account, then click on the menu bar's [Community Exchange -> Elite Member Services]**
+
+They are:
+- 🔌 Modular & reusable components
+- 📦 Environment-agnostic (backtest, sandbox, live)
+- 🧩 Easy to plug into any strategy or workflow
+- 🌐 Exchange-agnostic with unified interfaces
+
+Create, share, or combine plugins for indicators, strategies, risk controls, and more — all while keeping your code clean and scalable.
+
+![image](https://github.com/user-attachments/assets/3c9e3e92-9255-414b-ac62-d0e3cdabff40)
+
+## AI-Powered
+
+On the tenth anniversary of VeighNa's release, version 4.0 officially introduces the module targeting AI quantitative strategies, providing professional quantitative traders with **an all-in-one multi-factor machine learning (ML) strategy development, research, and live trading solution**:
+
+## vnpy Workspace
+
+While the vnpy Platform is all about an integration to dozens of different data vendors, the interface is either Python or a CLI.
+
+If you want an enterprise UI to visualize this datasets and use AI agents on top, you can find vnpy Workspace at.
+
+* :bar_chart: **dataset**: Factor Feature Engineering
+
+    * Designed specifically for ML algorithm training optimization, supporting efficient batch feature calculation and processing
+    * Built-in rich factor feature expression calculation engine, enabling rapid one-click generation of training data
+    * Alpha 158: A collection of stock market features from Microsoft's Qlib project, covering multiple dimensions of quantitative factors including K-line patterns, price trends, and time-series volatility
+
+* :bulb: **model**: Prediction Model Training
+
+    * Provides standardized ML model development templates, greatly simplifying model building and training processes
+    * Unified API interface design, supporting seamless switching between different algorithms for performance comparison testing
+    * Integrates multiple mainstream machine learning algorithms:
+        * Lasso]: Classic Lasso regression model, implementing feature selection through L1 regularization
+        * LightGBM: Efficient gradient boosting decision tree with a training engine optimized for large-scale datasets
+        * MLP: Multi-layer perceptron neural network, suitable for modeling complex non-linear relationships
+
+
+
+```js
+function signIn(password, twoFactorAuthCode) {
+    Onyx.merge(ONYXKEYS.ACCOUNT, {isLoading: true});
+    Authentication.Authenticate({
+        ...defaultParams,
+        password,
+        twoFactorAuthCode,
+    })
+        .then((response) => {
+            Onyx.merge(ONYXKEYS.SESSION, {authToken: response.authToken});
+        })
+        .catch((error) => {
+            Onyx.merge(ONYXKEYS.ACCOUNT, {error: error.message});
+        })
+        .finally(() => {
+            Onyx.merge(ONYXKEYS.ACCOUNT, {isLoading: false});
+        });
+}
+```
 
 ## Features
 
@@ -30,72 +86,66 @@ If you're curious about the journey of building this project, check out these bl
 - Multiple Agent Workflows using LangGraph
 - Deployment to AWS with the Copilot CLI
 
-## Installation
+## 🛠️ Installation
 
-1. Install the required dependencies using Poetry:
+In addition to the graphical start-up method based on VeighNa Station, you can also create run.py in any directory and write the following sample code:
 
-```bash
-poetry install
+```javascript
+// Bad
+validateAndSubmitForm() {
+    // validate...
+    this.setState({isLoading: true});
+    signIn()
+        .then((response) => {
+            if (result.jsonCode === 200) {
+                return;
+            }
+
+            this.setState({error: response.message});
+        })
+        .finally(() => {
+            this.setState({isLoading: false});
+        });
+}
+
+// Good
+validateAndSubmitForm() {
+    // validate...
+    signIn();
+}
 ```
 
-2. Set up the necessary environment variables. You can create an `.env` at the project root for these:
+```mermaid
+erDiagram
+    PLUGIN {
+        string id
+        string name
+        string type
+    }
 
-```bash
-export OPENAI_API_KEY=<your-api-key>
-export OPENBB_TOKEN=<your-openbb-token>
-export TIINGO_API_KEY=<your-tiingo-api-key>
-export IMGUR_CLIENT_ID=<your-imgur-client-id>
-export IMGUR_CLIENT_SECRET=<your-imgur-client-secret>
-export FMP_API_KEY=<fmp-api-key>
-export INTRINIO_API_KEY=<intrinio-api-key>
+    PLUGIN ||--o{ STRATEGY : implements
+    STRATEGY ||--o{ INDICATOR : uses
+    STRATEGY ||--o{ EXECUTOR : runs
+    EXECUTOR ||--o{ MARKET_INTERFACE : interacts
+    MARKET_INTERFACE }|--o{ EXCHANGE : connects
+    PLUGIN ||--o{ CONFIGURATION : requires
+    PLUGIN ||--o{ LOGGING : logs
 ```
 
-## Usage
 
-### Streamlit UI
 
-Run the Streamlit app:
+<p align="center">
+    <img src="https://minkxx-spotify-readme.vercel.app/api?theme=dark&rainbow=true&scan=true&spin=True" alt="Preview">
+</p>
 
-```bash
-streamlit run app/ui.py
-```
+<p align="center">
+  <img src="https://github.com/tarikmanoar/tarikmanoar/raw/output/github-snake-dark.svg" alt="snake"></center>
+</p>
 
-### FastAPI Server
+## Contributors
 
-Start the FastAPI server:
+ wouldn't be  without you. If we are going to disrupt financial industry, every contribution counts. Thank you for being part of this journey.
 
-```bash
-uvicorn app.server:app --host 0.0.0.0 --port 8080
-```
-
-You can view the [Swagger Docs](http://0.0.0.0:8080/docs) and test out the [Playground](http://0.0.0.0:8080/chat/playground), courtesy of [LangServe](https://python.langchain.com/v0.2/docs/langserve).
-
-## Docker
-
-Build the Docker image:
-
-```bash
-docker build -t financial-chat .
-```
-
-Run the Docker container:
-
-```bash
-docker run -p 8080:8080 --env-file .env financial-chat
-```
-
-## Project Structure
-
-- `app/`: Main application code
-  - `chains/`: LangChain agent and prompts
-  - `features/`: Feature-specific code (technical analysis, charting)
-  - `tools/`: Custom tools for data retrieval and analysis
-  - `ui.py`: Streamlit UI
-  - `server.py`: FastAPI server
-- `Dockerfile`: Dockerfile for building the application
-- `pyproject.toml`: Project dependencies and configuration
-- `README.md`: Project documentation
-
-## Flowchart
-
-![Flowchart](https://github.com/user-attachments/assets/5fa1e57e-d6ff-47bb-9792-6832612e7d83)
+<a href="https://github.com/vnpy-finance/vnpy/graphs/contributors">
+   <img src="https://contributors-img.web.app/image?repo=vnpy-finance/vnpy" width="800"/>
+</a>
