@@ -1,220 +1,101 @@
-<br />
+# financial-chat
 
-<div align="center">
-   <img style="margin: 0 auto; padding-bottom: 15px; padding-top: 30px" width=70%" src="https://firebasestorage.googleapis.com/v0/b/blankly-6ada5.appspot.com/o/blankly-github-logo.png?alt=media&token=8f436cd2-3d28-432c-867a-afef780f4260">
-</div>
-<br />
+A financial chat application powered by [LangChain](https://www.langchain.com/), [LangGraph](https://langchain-ai.github.io/langgraph), [OpenBB](https://openbb.co/products/platform), [Claude 3 Opus](https://www.anthropic.com/claude), and [Streamlit](https://streamlit.io).
 
-<div align="center">
-  <b>💨  Rapidly build and deploy quantitative models for stocks, crypto, and forex  🚀</b>
-</div>
-<br />
+## Blog Articles
 
-[![Discord Shield](https://img.shields.io/discord/831165782750789672)](https://discord.com/invite/xPHTuHCmuV)
-[![Open in Dev Containers](https://img.shields.io/static/v1?label=Dev%20Containers&message=Open&color=blue&logo=visualstudiocode)](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/OpenBB-finance/OpenBB)
-<a href="https://codespaces.new/OpenBB-finance/OpenBB">
-  <img src="https://github.com/codespaces/badge.svg" height="20" />
-</a>
-<a target="_blank" href="https://colab.research.google.com/github/OpenBB-finance/OpenBB/blob/develop/examples/googleColab.ipynb">
-  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
-</a>
-[![PyPI](https://img.shields.io/pypi/v/openbb?color=blue&label=PyPI%20Package)](https://pypi.org/project/openbb/)
+If you're curious about the journey of building this project, check out these blog articles:
 
+- [Building an Agentic Stock Analysis Tool with LangChain, OpenBB, and Claude 3 Opus](https://sethhobson.com/2024/03/building-an-agentic-stock-analysis-tool-with-langchain-openbb-and-claude-3-opus)
+- [Expanding the AI Stock Analysis Agent with Fundamental and Technical Tools](https://sethhobson.com/2024/04/expanding-the-ai-stock-analysis-agent-with-fundamental-and-technical-tools)
+- [Improving the Edge: Trendlines, Sectors, and Sentiment](https://sethhobson.com/2024/04/improving-the-edge-trendlines-sectors-and-sentiment)
+- [Unlocking Alpha: Harnessing Relative Strength for AI-Driven Stock Selection](https://sethhobson.com/2024/04/unlocking-alpha-harnessing-relative-strength-for-ai-driven-stock-selection)
+- [Seeing the Bigger Picture: Adding Chart-Based Technical Analysis](https://sethhobson.com/2024/04/seeing-the-bigger-picture-adding-chart-based-technical-analysis)
+- [Empowering the AI Stock Analysis Agent with Universe Scanning](https://sethhobson.com/2024/04/empowering-the-ai-stock-analysis-agent-with-universe-scanning)
+- [Risk Management in AI Stock Trading: A Key to Success](https://sethhobson.com/2024/05/risk-management-in-ai-stock-trading-a-key-to-success)
+- [Converting the AI Stock AgentExecutor to LangGraph](https://sethhobson.com/2024/05/converting-ai-stock-agentexecutor-to-langgraph)
+- [Unleashing the Power of Multiple Agents with LangGraph](https://sethhobson.com/2024/05/unleashing-the-power-of-multiple-agents-with-langgraph)
+- [Deploying the AI Stock Analysis Agent on AWS with Copilot](https://sethhobson.com/2024/06/deploying-the-ai-stock-analysis-agent-on-aws-with-copilot)
 
-## Why Blankly Plugins?
+## Features
 
-Blankly Plugins let you **build once, use anywhere** across backtests, paper trading, and live markets.
+- Fetches financial data using OpenBB
+- Generates technical analysis summaries using AI
+- Provides stock price history, quantitative stats, and more
+- Calculates relative strength for stocks
+- Sentiment analysis on news articles
+- Universe scanning using FinViz filters
+- Risk management techniques using technically-derived stops and R Multiples
+- Interactive Streamlit UI for chat-based interaction
+- Multiple Agent Workflows using LangGraph
+- Deployment to AWS with the Copilot CLI
 
-They are:
-- 🔌 Modular & reusable components
-- 📦 Environment-agnostic (backtest, sandbox, live)
-- 🧩 Easy to plug into any strategy or workflow
-- 🌐 Exchange-agnostic with unified interfaces
+## Installation
 
-Create, share, or combine plugins for indicators, strategies, risk controls, and more — all while keeping your code clean and scalable.
-
-<div align="center">
-<a target="_blank" href="https://youtu.be/pcm0h63rhUU"><img src="https://firebasestorage.googleapis.com/v0/b/blankly-6ada5.appspot.com/o/github%2Fbuild_a_bot_readme_thumbnail.jpg?alt=media&token=a9dd030a-805c-447f-a970-2bc8e1815662" style="border-radius:10px; width: 50%"></a>
-</div>
-
-### Trade Stocks, Crypto, Futures, and Forex
-
-```python
-from blankly import Alpaca, CoinbasePro
-
-stocks = Alpaca()
-crypto = CoinbasePro()
-futures = BinanceFutures()
-
-# Easily perform the same actions across exchanges & asset types
-stocks.interface.market_order('AAPL', 'buy', 1)
-crypto.interface.market_order('BTC-USD', 'buy', 1)
-# Full futures feature set
-futures.interface.get_hedge_mode()
-```
-
-### Backtest your trades, events, websockets, and custom data
-
-```python
-import blankly
-"""
-This example shows how backtest over tweets
-"""
-
-class TwitterBot(blankly.Model):
-    def main(self, args):
-        while self.has_data:
-            self.backtester.value_account()
-            self.sleep('1h')
-
-    def event(self, type_: str, data: str):
-        # Now check if it's a tweet about Tesla
-        if 'tsla' in data.lower() or 'gme' in data.lower():
-            # Buy, sell or evaluate your portfolio
-            pass
-
-
-if __name__ == "__main__":
-    exchange = blankly.Alpaca()
-    model = TwitterBot(exchange)
-
-    # Add the tweets json here
-    model.backtester.add_custom_events(blankly.data.JsonEventReader('./tweets.json'))
-    # Now add some underlying prices at 1 month
-    model.backtester.add_prices('TSLA', '1h', start_date='3/20/22', stop_date='4/15/22')
-
-    # Backtest or run live
-    print(model.backtest(args=None, initial_values={'USD': 10000}))
-
-```
-
-#### Accurate Backtest Holdings
-
-<div align="center">
-    <a><img src="https://firebasestorage.googleapis.com/v0/b/blankly-6ada5.appspot.com/o/github%2FScreen%20Shot%202022-04-17%20at%202.37.58%20PM.png?alt=media&token=d5738617-e197-4da2-850d-8fbbfda05275" style="border-radius:10px"></a>
-</div>
-
-
-## 🛠️ Installation
-
-Follow the steps below to install and run this project on your local machine.
-
-### 1. 📦 Prerequisites
-
-Make sure you have the following tools installed on your system:
-
-- [Node.js](https://nodejs.org/)  (v14.x or newer)
-- [npm](https://www.npmjs.com/)  (comes with Node.js)
-- [Git](https://git-scm.com/) 
-- Python 3.x (optional, if any indicators or tools require it)
-
-> You can also use Docker to run the project in an isolated environment.
-
-### 3. 📦 Install Dependencies
-
-Install the required npm packages:
+1. Install the required dependencies using Poetry:
 
 ```bash
-npm install
+poetry install
 ```
 
-If the plugin uses Python-based tools or indicators, install the Python dependencies as well:
+2. Set up the necessary environment variables. You can create an `.env` at the project root for these:
 
 ```bash
-pip install -r requirements.txt
+export OPENAI_API_KEY=<your-api-key>
+export OPENBB_TOKEN=<your-openbb-token>
+export TIINGO_API_KEY=<your-tiingo-api-key>
+export IMGUR_CLIENT_ID=<your-imgur-client-id>
+export IMGUR_CLIENT_SECRET=<your-imgur-client-secret>
+export FMP_API_KEY=<fmp-api-key>
+export INTRINIO_API_KEY=<intrinio-api-key>
 ```
 
----
+## Usage
 
-### 4. 🔐 Set Up Exchange API Keys
+### Streamlit UI
 
-To allow the plugin to interact with cryptocurrency exchanges, set up your API credentials.
-
-Create a `.env` file in the root directory and add your exchange keys:
-
-```env
-EXCHANGE_API_KEY=your_api_key_here
-EXCHANGE_SECRET_KEY=your_secret_key_here
-```
-
-> Make sure not to commit this file to version control. It should remain private.
-
----
-
-### 5. ⚙️ Configure the Plugin
-
-Each plugin comes with a configuration file. For example:
-
-```yaml
-# config/rsi-config.yaml
-strategy:
-  rsi_period: 14
-  overbought_threshold: 70
-  oversold_threshold: 30
-  symbol: BTC/USDT
-  interval: "1h"
-```
-
-You can modify these values based on your trading preferences.
-
----
-
-### 6. ▶️ Run the Plugin
-
-Once everything is set up, start the plugin:
+Run the Streamlit app:
 
 ```bash
-npm start -- --plugin rsi --config config/rsi-config.yaml
+streamlit run app/ui.py
 ```
 
-Or, if you're using a custom script:
+### FastAPI Server
+
+Start the FastAPI server:
 
 ```bash
-node index.js --plugin rsi --config config/rsi-config.yaml
+uvicorn app.server:app --host 0.0.0.0 --port 8080
 ```
 
----
+You can view the [Swagger Docs](http://0.0.0.0:8080/docs) and test out the [Playground](http://0.0.0.0:8080/chat/playground), courtesy of [LangServe](https://python.langchain.com/v0.2/docs/langserve).
 
-### 7. 🐳 Optional: Run with Docker
+## Docker
 
-Build and run the plugin using Docker:
+Build the Docker image:
 
 ```bash
-docker build -t blankly-rsi-plugin .
-docker run -it --env-file .env blankly-rsi-plugin
+docker build -t financial-chat .
 ```
 
-```mermaid
-erDiagram
-    PLUGIN {
-        string id
-        string name
-        string type
-    }
+Run the Docker container:
 
-    PLUGIN ||--o{ STRATEGY : implements
-    STRATEGY ||--o{ INDICATOR : uses
-    STRATEGY ||--o{ EXECUTOR : runs
-    EXECUTOR ||--o{ MARKET_INTERFACE : interacts
-    MARKET_INTERFACE }|--o{ EXCHANGE : connects
-    PLUGIN ||--o{ CONFIGURATION : requires
-    PLUGIN ||--o{ LOGGING : logs
+```bash
+docker run -p 8080:8080 --env-file .env financial-chat
 ```
 
+## Project Structure
 
+- `app/`: Main application code
+  - `chains/`: LangChain agent and prompts
+  - `features/`: Feature-specific code (technical analysis, charting)
+  - `tools/`: Custom tools for data retrieval and analysis
+  - `ui.py`: Streamlit UI
+  - `server.py`: FastAPI server
+- `Dockerfile`: Dockerfile for building the application
+- `pyproject.toml`: Project dependencies and configuration
+- `README.md`: Project documentation
 
-<p align="center">
-    <img src="https://minkxx-spotify-readme.vercel.app/api?theme=dark&rainbow=true&scan=true&spin=True" alt="Preview">
-</p>
+## Flowchart
 
-<p align="center">
-  <img src="https://github.com/tarikmanoar/tarikmanoar/raw/output/github-snake-dark.svg" alt="snake"></center>
-</p>
-
-## Contributors
-
- wouldn't be  without you. If we are going to disrupt financial industry, every contribution counts. Thank you for being part of this journey.
-
-<a href="https://github.com/OpenBB-finance/OpenBB/graphs/contributors">
-   <img src="https://contributors-img.web.app/image?repo=OpenBB-finance/OpenBB" width="800"/>
-</a>
+![Flowchart](graph_mermaid_image.png)
