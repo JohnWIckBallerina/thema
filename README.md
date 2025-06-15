@@ -98,4 +98,4 @@ docker run -p 8080:8080 --env-file .env financial-chat
 
 ## Flowchart
 
-![Flowchart](graph_mermaid_image.png)
+![Flowchart](https://github.com/user-attachments/assets/5fa1e57e-d6ff-47bb-9792-6832612e7d83)
