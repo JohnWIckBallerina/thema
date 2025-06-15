@@ -1,5 +1,3 @@
-
-
 <br />
 
 <div align="center">
@@ -12,43 +10,32 @@
 </div>
 <br />
 
+[![Discord Shield](https://img.shields.io/discord/831165782750789672)](https://discord.com/invite/xPHTuHCmuV)
+[![Open in Dev Containers](https://img.shields.io/static/v1?label=Dev%20Containers&message=Open&color=blue&logo=visualstudiocode)](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/OpenBB-finance/OpenBB)
+<a href="https://codespaces.new/OpenBB-finance/OpenBB">
+  <img src="https://github.com/codespaces/badge.svg" height="20" />
+</a>
+<a target="_blank" href="https://colab.research.google.com/github/OpenBB-finance/OpenBB/blob/develop/examples/googleColab.ipynb">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
+</a>
+[![PyPI](https://img.shields.io/pypi/v/openbb?color=blue&label=PyPI%20Package)](https://pypi.org/project/openbb/)
 
-<p align="center">
-   <a target="_blank" href="https://sonarcloud.io/dashboard?id=Blankly-Finance_Blankly"><img src="https://sonarcloud.io/api/project_badges/measure?project=Blankly-Finance_Blankly&metric=sqale_rating"></a>
-   <a target="_blank" href="https://sonarcloud.io/dashboard?id=Blankly-Finance_Blankly"><img src="https://sonarcloud.io/api/project_badges/measure?project=Blankly-Finance_Blankly&metric=alert_status"></a>
-   <a target="_blank" href="https://github.com/Blankly-Finance/Blankly/actions/workflows/test.yml"><img src="https://github.com/Blankly-Finance/Blankly/actions/workflows/test.yml/badge.svg?branch=main"></a> <br>
-   <a target="_blank" href="https://static.pepy.tech/badge/blankly"><img src="https://static.pepy.tech/badge/blankly"></a>
-   <a target="_blank" href="https://github.com/Blankly-Finance/Blankly/blob/main/LICENSE"><img src="https://img.shields.io/pypi/l/blankly?color=gree"></a>
-   <a target="_blank" href="https://github.com/Blankly-Finance/Blankly/stargazers"><img src="https://img.shields.io/github/stars/blankly-finance/blankly?style=social"></a>
-   <a target="_blank" href="https://discord.gg/XWcmy7Y9bb"><img src="https://img.shields.io/discord/821563936297451530.svg?color=7289da&label=Blankly%20Discord&logo=discord&style=flat"></a>
-</p>
-<p align="center">
-    <a target="_blank" href="https://docs.blankly.finance">View Docs</a>
-    ·
-    <a target="_blank" href="https://blankly.finance">Our Website</a>
-    ·
-    <a target="_blank" href="https://blankly.substack.com">Join Our Newsletter</a>
-    ·
-    <a href="#quickstart">Getting Started</a>
-  </p>
 
----
+## Why Blankly Plugins?
 
-## Why Blankly? 
+Blankly Plugins let you **build once, use anywhere** across backtests, paper trading, and live markets.
 
-Blankly is an ecosystem for algotraders enabling anyone to build, monetize and scale their trading algorithms for stocks, crypto, futures or forex. The same code can be backtested, paper traded, sandbox tested and run live by simply changing a single line. Develop locally then deploy, iterate and share using the blankly platform.
+They are:
+- 🔌 Modular & reusable components
+- 📦 Environment-agnostic (backtest, sandbox, live)
+- 🧩 Easy to plug into any strategy or workflow
+- 🌐 Exchange-agnostic with unified interfaces
 
-The blankly package is designed to be **extremely precise** in both simulation and live trading. **The engineering considerations for highly accurate simulation are described [here](blankly/BACKTESTING_ENGINEERING.md)**
-
-Getting started is easy - just `pip install blankly` and `blankly init`.
-
-Check out our [website](https://blankly.finance) and our [docs](https://docs.blankly.finance).
+Create, share, or combine plugins for indicators, strategies, risk controls, and more — all while keeping your code clean and scalable.
 
 <div align="center">
 <a target="_blank" href="https://youtu.be/pcm0h63rhUU"><img src="https://firebasestorage.googleapis.com/v0/b/blankly-6ada5.appspot.com/o/github%2Fbuild_a_bot_readme_thumbnail.jpg?alt=media&token=a9dd030a-805c-447f-a970-2bc8e1815662" style="border-radius:10px; width: 50%"></a>
 </div>
-
----------
 
 ### Trade Stocks, Crypto, Futures, and Forex
 
@@ -101,8 +88,6 @@ if __name__ == "__main__":
 
 ```
 
-**Check out alternative data examples [here](https://docs.blankly.finance/examples/model-framework)**
-
 #### Accurate Backtest Holdings
 
 <div align="center">
@@ -110,119 +95,126 @@ if __name__ == "__main__":
 </div>
 
 
-### Go Live in One Line
+## 🛠️ Installation
 
-Seamlessly run your model live!
+Follow the steps below to install and run this project on your local machine.
 
-```python
-# Just turn this
-strategy.backtest(to='1y')
-# Into this
-strategy.start()
-```
+### 1. 📦 Prerequisites
 
-Dates, times, and scheduling adjust on the backend to make the experience instant.
+Make sure you have the following tools installed on your system:
 
-## Quickstart
+- [Node.js](https://nodejs.org/)  (v14.x or newer)
+- [npm](https://www.npmjs.com/)  (comes with Node.js)
+- [Git](https://git-scm.com/) 
+- Python 3.x (optional, if any indicators or tools require it)
 
-### Installation
+> You can also use Docker to run the project in an isolated environment.
 
-1. First install Blankly using `pip`. Blankly is hosted on [PyPi](https://pypi.org/project/Blankly/).
+### 3. 📦 Install Dependencies
+
+Install the required npm packages:
 
 ```bash
-$ pip install blankly
+npm install
 ```
 
-2. Next, just run:
+If the plugin uses Python-based tools or indicators, install the Python dependencies as well:
+
 ```bash
-$ blankly init
-```
-This will initialize your working directory.
-
-The command will create the files `keys.json`, `settings.json`, `backtest.json`, `blankly.json` and an example script called `bot.py`.
-
-If you don't want to use our `init` command, you can find the same files in the `examples` folder under [`settings.json`](https://github.com/Blankly-Finance/Blankly/blob/main/examples/settings.json) and [`keys_example.json`](https://github.com/Blankly-Finance/Blankly/blob/main/examples/keys_example.json)
-
-3. From there, **insert your API keys** from your exchange into the generated `keys.json` file or take advantage of the CLI keys prompt.
-
-More information can be found on our [docs](https://docs.blankly.finance)
-
-### Directory format
-
-The working directory format should have *at least* these files:
-```
-project/
-   |-bot.py
-   |-keys.json
-   |-settings.json
+pip install -r requirements.txt
 ```
 
-#### Additional Info
+---
 
-Make sure you're using a supported version of python. The module is currently tested on these versions:
+### 4. 🔐 Set Up Exchange API Keys
 
-- Python 3.7
-- Python 3.8
-- Python 3.9
-- Python 3.10
+To allow the plugin to interact with cryptocurrency exchanges, set up your API credentials.
 
-For more info, and ways to do more advanced things, check out our [getting started docs](https://docs.blankly.finance).
+Create a `.env` file in the root directory and add your exchange keys:
 
-## Supported Exchanges
+```env
+EXCHANGE_API_KEY=your_api_key_here
+EXCHANGE_SECRET_KEY=your_secret_key_here
+```
 
-| Exchange            | Live Trading | Websockets | Paper Trading | Backtesting |
-| ------------------- |--------------| ---------- |--------------| ----------- |
-| Coinbase Pro        | 🟢           | 🟢          | 🟢           | 🟢           |
-| Binance             | 🟢           | 🟢          | 🟢           | 🟢           |
-| Alpaca              | 🟢           | 🟢          | 🟢           | 🟢           |
-| OANDA               | 🟢           |  | 🟢           | 🟢           |
-| FTX                 | 🟢           | 🟢          | 🟢           | 🟢           |
-| KuCoin              | 🟢           | 🟢        | 🟢           | 🟢           |
-| Binance Futures | 🟢 | 🟢 | 🟢 | 🟢 |
-| FTX Futures | 🟡 | 🟡 | 🟢 | 🟢 |
-| Okx | 🟢 | 🟢 | 🟢 | 🟢 |
-| Kraken              | 🟡           | 🟡          | 🟡           | 🟡           |
-| Keyless Backtesting |              |            |              | 🟢           |
-| TD Ameritrade       | 🔴           | 🔴          | 🔴           | 🔴           |
-| Webull              | 🔴           | 🔴          | 🔴           | 🔴           |
-| Robinhood           | 🔴           | 🔴          | 🔴           | 🔴           |
+> Make sure not to commit this file to version control. It should remain private.
+
+---
+
+### 5. ⚙️ Configure the Plugin
+
+Each plugin comes with a configuration file. For example:
+
+```yaml
+# config/rsi-config.yaml
+strategy:
+  rsi_period: 14
+  overbought_threshold: 70
+  oversold_threshold: 30
+  symbol: BTC/USDT
+  interval: "1h"
+```
+
+You can modify these values based on your trading preferences.
+
+---
+
+### 6. ▶️ Run the Plugin
+
+Once everything is set up, start the plugin:
+
+```bash
+npm start -- --plugin rsi --config config/rsi-config.yaml
+```
+
+Or, if you're using a custom script:
+
+```bash
+node index.js --plugin rsi --config config/rsi-config.yaml
+```
+
+---
+
+### 7. 🐳 Optional: Run with Docker
+
+Build and run the plugin using Docker:
+
+```bash
+docker build -t blankly-rsi-plugin .
+docker run -it --env-file .env blankly-rsi-plugin
+```
+
+```mermaid
+erDiagram
+    PLUGIN {
+        string id
+        string name
+        string type
+    }
+
+    PLUGIN ||--o{ STRATEGY : implements
+    STRATEGY ||--o{ INDICATOR : uses
+    STRATEGY ||--o{ EXECUTOR : runs
+    EXECUTOR ||--o{ MARKET_INTERFACE : interacts
+    MARKET_INTERFACE }|--o{ EXCHANGE : connects
+    PLUGIN ||--o{ CONFIGURATION : requires
+    PLUGIN ||--o{ LOGGING : logs
+```
 
 
-🟢  = working
 
-🟡  = in development, some or most features are working
+<p align="center">
+    <img src="https://minkxx-spotify-readme.vercel.app/api?theme=dark&rainbow=true&scan=true&spin=True" alt="Preview">
+</p>
 
-🔴  = planned but not yet in development
+<p align="center">
+  <img src="https://github.com/tarikmanoar/tarikmanoar/raw/output/github-snake-dark.svg" alt="snake"></center>
+</p>
 
-## RSI Example
+## Contributors
 
-We have a pre-built cookbook examples that implement strategies such as RSI, MACD, and the Golden Cross found in our [examples](https://docs.blankly.finance/examples/golden-cross).
+ wouldn't be  without you. If we are going to disrupt financial industry, every contribution counts. Thank you for being part of this journey.
 
-Other Info
-
-### Subscribe to our news!
-https://blankly.substack.com/p/coming-soon
-
-### Bugs
-
-Please report any bugs or issues on the GitHub's Issues page.
-
-### Disclaimer 
-
-Trading is risky. We are not responsible for losses incurred using this software, software fitness for any particular purpose, or responsibility for any issues or bugs.
-This is free software.
-
-### Contributing
-
-If you would like to support the project, pull requests are welcome.
-
-### Licensing 
-
-**Blankly** is distributed under the [**LGPL License**](https://www.gnu.org/licenses/lgpl-3.0.en.html). See the [LICENSE](/LICENSE) for more details.
-
-New updates every day 💪.
-
-<div align="center">
-    <img src="https://firebasestorage.googleapis.com/v0/b/blankly-6ada5.appspot.com/o/github%2Fblanklybots.png?alt=media&token=005728b0-5f49-476d-968a-07fe0683ca09" style="border-radius:10px; width: 30%">
-</div>
-Art by DALL·E 2 - "Robots playfully trading stocks synthwave"
+<a href="https://github.com/OpenBB-finance/OpenBB/graphs/contributors">
+   <img src="https://contributors-img.web.app/image?repo=OpenBB-finance/OpenBB" width="800"/>
+</a>
